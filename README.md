@@ -20,7 +20,6 @@ Check the pinned message in the #data-modelling Slack channel or ask Rahul for t
 Before pushing a new version of serosurvr, please follow the following steps:
 - Run `devtools::document()` to ensure that the package is fully documented
 - Run `devtools::check()` to ensure that all checks pass and the updates are ready to push
-- Test installing the package with `devtools::install()`
 
 ### renv
 
