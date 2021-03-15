@@ -2,7 +2,14 @@
 
 ## Using serosurvr
 
-## Environment Variables
+### Installation
+
+```
+install.packages("devtools")
+devtools::install_github("serotracker/serosurvr")
+```
+
+### Environment Variables
 
 If you are a SeroTracker developer, researcher, or partner, or CITF modelling team member that needs to pull new data, add a .env file to the top level of the repository to store environment variables. This file should be formatted as follows:
 
