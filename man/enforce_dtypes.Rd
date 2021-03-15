@@ -21,6 +21,8 @@ for every column}
 Enforces data types on a tibble using a schema that maps feature names to dtypes.
 }
 \examples{
-fs_males_tbl_cleaned <- enforce_dtypes(fs_males_tbl, serotracker_dtypes, TRUE)
+\dontrun{
+fs_males_tbl_cleaned <- enforce_dtypes(fs_males_tbl, st_dtypes, TRUE)
+}
 }
 \keyword{clean}

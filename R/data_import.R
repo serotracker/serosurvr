@@ -36,32 +36,30 @@ datareq_params <- function(reqname = character(),
 #'
 #' Request SeroTracker data from a data_provider endpoint
 #' @param endpoint endpoint to be requested; "records" or "filter_options"
-#' @param params [serosurvr:datareq_params] object itemizing request parameters
-#' @seealso [serosurvr:get_data] calls this function
+#' @param params [serosurvr::datareq_params] object itemizing request parameters
+#' @seealso [serosurvr::get_data] and [serosurvr::filter_options] call this
 #' @keywords import
-#' @examples
-#' retrieve_data(fs_males_params)
 retrieve_data <- function(endpoint, params = NA) {
-  
+
   dotenv::load_dot_env(file = ".env")
-  
+
   if (endpoint == "records") {
-    
+
     stopifnot(inherits(params, "datareq_params"))
     url <- Sys.getenv("RECORDS_URL")
     response <- httr::POST(url = url,
                            body = params,
                            encode = "json")
-    
+
   } else if (endpoint == "filter_options") {
-    
+
     url <- Sys.getenv("FILTER_OPTIONS_URL")
     response <- httr::GET(url = url)
-    
+
   } else {
     stop(sprintf("endpoint %s is an invalid endpoint option", endpoint))
   }
-  
+
   if (httr::http_type(response) != "application/json") {
     stop("Endpoint did not return JSON", call. = FALSE)
   }
@@ -98,27 +96,29 @@ retrieve_data <- function(endpoint, params = NA) {
 #' @keywords import
 #' @export
 #' @examples
+#' \dontrun{
 #' fs_males_tbl <- retrieve_data(fs_males_params,
 #'                               TRUE,
 #'                               '.cache')
+#' }
 get_data <- function(params,
                      import_new_data,
                      path_to_cache_folder) {
   stopifnot(inherits(params, "datareq_params") &
               is.logical(import_new_data) &
               is.character(path_to_cache_folder))
-  
+
   reqname <- attr(params, "reqname")
   path_to_cache_file = fs::path(path_to_cache_folder,
                                 reqname,
                                 ext = "Rds")
-  
+
   if (import_new_data) {
     fs::dir_create(path_to_cache_folder)
 
-    tbl <- 
+    tbl <-
       retrieve_data("records", params) %>%
-      tibble::as_tibble() %>% 
+      tibble::as_tibble() %>%
       readr::write_rds(path_to_cache_file,
                        compress = "gz")
   } else {
@@ -129,7 +129,7 @@ get_data <- function(params,
     }
     tbl <- readr::read_rds(path_to_cache_file)
   }
-  
+
   tbl
 }
 
@@ -140,7 +140,9 @@ get_data <- function(params,
 #' @seealso Calls [serosurvr::retrieve_data]
 #' @export
 #' @examples
+#' \dontrun{
 #' filter_options()
+#' }
 filter_options <- function() {
   retrieve_data("filter_options")
 }

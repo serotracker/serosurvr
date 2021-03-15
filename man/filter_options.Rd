@@ -10,7 +10,9 @@ filter_options()
 Retrieve filter options from the data_provider/filter_options endpoint
 }
 \examples{
+\dontrun{
 filter_options()
+}
 }
 \seealso{
 Calls \link{retrieve_data}

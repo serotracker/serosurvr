@@ -19,9 +19,11 @@ If new data is requested, it is cached to the \code{path_to_cache_folder}.
 Otherwise, new data is loaded from the \code{path_to_cache_folder}.
 }
 \examples{
+\dontrun{
 fs_males_tbl <- retrieve_data(fs_males_params,
                               TRUE,
                               '.cache')
+}
 }
 \seealso{
 calls \link{retrieve_data}

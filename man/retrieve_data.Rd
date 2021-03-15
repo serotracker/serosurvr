@@ -9,15 +9,12 @@ retrieve_data(endpoint, params = NA)
 \arguments{
 \item{endpoint}{endpoint to be requested; "records" or "filter_options"}
 
-\item{params}{\link{serosurvr:datareq_params} object itemizing request parameters}
+\item{params}{\link{datareq_params} object itemizing request parameters}
 }
 \description{
 Request SeroTracker data from a data_provider endpoint
 }
-\examples{
-retrieve_data(fs_males_params)
-}
 \seealso{
-\link{serosurvr:get_data} calls this function
+\link{get_data} and \link{filter_options} call this
 }
 \keyword{import}

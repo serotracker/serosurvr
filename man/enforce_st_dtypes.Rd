@@ -13,7 +13,9 @@ enforce_st_dtypes(tbl)
 Enforces SeroTracker data types on a tibble using a predefined schema.
 }
 \examples{
+\dontrun{
 fs_males_tbl_cleaned <- enforce_st_dtypes(fs_males_tbl)
+}
 }
 \seealso{
 wrapper method for \link{enforce_dtypes}

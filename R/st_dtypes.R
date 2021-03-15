@@ -1,101 +1,10 @@
 #' Data types for all SeroTracker database elements.
-#' 
+#'
 #' Maps SeroTracker database elements to data types.
-#' 
+#'
 #' @docType data
 #' @name st_dtypes
-#' @format A named list of character vectors The name corresponds to the data 
-#' type (e.g., int), and the vector with that name enumerates all fields which 
-#' should have that data type. 
-st_dtypes <- list(
-  logical = 
-    c("academic_primary_estimate",
-      "dashboard_primary_estimate",
-      "pop_adj",
-      "superceded",
-      "test_adj"),
-  double = 
-    c("case_count_0",
-      "case_count_neg14",
-      "case_count_neg9",
-      "case_population",
-      "death_count_plus11",
-      "death_count_plus4",
-      "deaths_population",
-      "ind_se",
-      "ind_sp",
-      "pin_latitude",
-      "pin_longitude",
-      "seroprev_95_ci_lower",
-      "seroprev_95_ci_upper",
-      "serum_pos_prevalence",
-      "case_count",
-      "death_count",
-      "full_vaccination_count",
-      "vaccination_count",
-      "test_count"),
-  integer = 
-    c("age_max",
-      "age_min",
-      "denominator_value",
-      "ind_se_n",
-      "ind_sp_n",
-      "number_of_females",
-      "number_of_males",
-      "numerator_value",
-      "se_n",
-      "sp_n"),
-  character = 
-    c("age_variation",
-      "average_age",
-      "country",
-      "country_iso3",
-      "estimate_name",
-      "ind_eval_lab",
-      "ind_eval_link",
-      "population_group",
-      "sample_frame_info",
-      "source_id",
-      "source_name",
-      "study_name",
-      "subgroup_var",
-      "subgroup_cat",
-      "test_linked_uid",
-      "test_name",
-      "url",
-      "subgroup_specific_category"),
-  date = 
-    c("sampling_end_date", 
-      "sampling_start_date",
-      "publication_date",
-      "date_created",
-      "last_modified_time"),
-  factor = 
-    c("age", 
-      "age_variation_measure",
-      "estimate_grade",
-      "gbd_region",
-      "gbd_subregion",
-      "genpop",
-      "isotype_comb",
-      "jbi_1", "jbi_2", "jbi_3",
-      "jbi_4", "jbi_5", "jbi_6",
-      "jbi_7", "jbi_8", "jbi_9",
-      "lmic_hic",
-      "measure_of_age",
-      "overall_risk_of_bias",
-      "pin_region_type",
-      "sampling_type",
-      "sex",
-      "source_type",
-      "specimen_type",
-      "test_not_linked_reason",
-      "test_type",
-      "test_validation"),
-  list = 
-    c("antibody_target",
-      "city",
-      "isotypes_reported",
-      "state",
-      "test_manufacturer")
-)
+#' @format A named list of character vectors The name corresponds to the data
+#' type (e.g., int), and the vector with that name enumerates all fields which
+#' should have that data type.
+"st_dtypes"
