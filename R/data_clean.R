@@ -18,16 +18,17 @@ enforce_dtypes <- function(tbl,
                            dtypes,
                            allcols = TRUE) {
 
+  cols_in_data <- colnames(tbl)
+
   if (allcols) {
     # ensure that all columns have specified dtypes
-    dtyped_cols <- purrr::reduce(dtypes, union)
-    all_cols <- colnames(tbl)
+    cols_with_dtypes <- purrr::reduce(dtypes, union)
 
-    undtyped_cols <- setdiff(all_cols, dtyped_cols)
-    if (length(undtyped_cols) > 0) {
+    cols_without_dtypes <- setdiff(cols_in_data, cols_with_dtypes)
+    if (length(cols_without_dtypes) > 0) {
       warning(sprintf("serotrackr does not specify data types for the following columns.
                       Please add dtypes for these columns to serosurvr/R/st_dtypes.R: %s",
-                      paste(undtyped_cols, collapse = ", ")),
+                      paste(cols_without_dtypes, collapse = ", ")),
               call. = FALSE)
     }
   }
@@ -36,12 +37,24 @@ enforce_dtypes <- function(tbl,
   # would be ideal to clean this up by creating a mapping between dtypes names and functions
   # and calling all relevant functions automatically
   tbl_retyped <- tbl %>%
-    dplyr::mutate(dplyr::across(tidyselect::all_of(dtypes$logical), as.logical),
-                  dplyr::across(tidyselect::all_of(dtypes$double), as.double),
-                  dplyr::across(tidyselect::all_of(dtypes$integer), as.integer),
-                  dplyr::across(tidyselect::all_of(dtypes$chracter), as.character),
-                  dplyr::across(tidyselect::all_of(dtypes$date), lubridate::as_date),
-                  dplyr::across(tidyselect::all_of(dtypes$factor), forcats::as_factor))
+    dplyr::mutate(dplyr::across(tidyselect::all_of(dplyr::intersect(dtypes$logical,
+                                                                    cols_in_data)),
+                                as.logical),
+                  dplyr::across(tidyselect::all_of(dplyr::intersect(dtypes$double,
+                                                                    cols_in_data)),
+                                as.double),
+                  dplyr::across(tidyselect::all_of(dplyr::intersect(dtypes$integer,
+                                                                    cols_in_data)),
+                                as.integer),
+                  dplyr::across(tidyselect::all_of(dplyr::intersect(dtypes$character,
+                                                                    cols_in_data)),
+                                as.character),
+                  dplyr::across(tidyselect::all_of(dplyr::intersect(dtypes$date,
+                                                                    cols_in_data)),
+                                lubridate::as_date),
+                  dplyr::across(tidyselect::all_of(dplyr::intersect(dtypes$factor,
+                                                                    cols_in_data)),
+                                forcats::as_factor))
 
   tbl_retyped
 }
