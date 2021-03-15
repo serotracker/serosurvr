@@ -1,8 +1,10 @@
 # serosurvr
 
-### Environment Variables
+## Using serosurvr
 
-If you are a SeroTracker developer, researcher, or partner, or CITF modelling team member, that needs to pull new data, add a .env file to the top level of the repository to store environment variables. This file should be formatted as follows:
+## Environment Variables
+
+If you are a SeroTracker developer, researcher, or partner, or CITF modelling team member that needs to pull new data, add a .env file to the top level of the repository to store environment variables. This file should be formatted as follows:
 
 ```
 RECORDS_URL=
@@ -10,6 +12,15 @@ FILTER_OPTIONS_URL=
 ```
 
 Check the pinned message in the #data-modelling Slack channel or ask Rahul for the environment variables that you will need.
+
+## Improving serosurvr
+
+### Pushing new versions of serosurvr
+
+Before pushing a new version of serosurvr, please follow the following steps:
+- Run `devtools::document()` to ensure that the package is fully documented
+- Run `devtools::check()` to ensure that all checks pass and the updates are ready to push
+- Test installing the package with `devtools::install()`
 
 ### renv
 
