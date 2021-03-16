@@ -41,8 +41,10 @@ if (FALSE) {
 The custom `serosurvr` library is contained in a [public GitHub repo](https://github.com/serotracker/serosurvr): `serotracker/serosurvr`.
 
 ```{r serosurvr}
-library("devtools")
-devtools::install_github("serotracker/serosurvr", build_vignettes = TRUE)
+if (FALSE) {
+  library("devtools")
+  devtools::install_github("serotracker/serosurvr", build_vignettes = TRUE)
+}
 library("serosurvr")      # load newest serosurvr
 ```
 ## Get Data

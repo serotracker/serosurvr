@@ -39,35 +39,10 @@ The custom `serosurvr` library is contained in a [public GitHub repo](https://gi
 
 
 ```r
-library("devtools")
-devtools::install_github("serotracker/serosurvr", build_vignettes = TRUE)
-#> Downloading GitHub repo serotracker/serosurvr@HEAD
-#> These packages have more recent versions available.
-#> It is recommended to update all of them.
-#> Which would you like to update?
-#> 
-#> 1: All                                 
-#> 2: CRAN packages only                  
-#> 3: None                                
-#> 4: utf8      (1.1.4   -> 1.2.1 ) [CRAN]
-#> 5: cli       (2.3.0   -> 2.3.1 ) [CRAN]
-#> 6: pillar    (1.5.0   -> 1.5.1 ) [CRAN]
-#> 7: tibble    (3.0.6   -> 3.1.0 ) [CRAN]
-#> 8: lubridate (1.7.9.2 -> 1.7.10) [CRAN]
-#> 9: dplyr     (1.0.4   -> 1.0.5 ) [CRAN]
-#> 
-#>      checking for file ‘/tmp/Rtmp1WSMq0/remotes35d16894408b/serotracker-serosurvr-583a465/DESCRIPTION’ ...  ✓  checking for file ‘/tmp/Rtmp1WSMq0/remotes35d16894408b/serotracker-serosurvr-583a465/DESCRIPTION’
-#>   ─  preparing ‘serosurvr’:
-#>      checking DESCRIPTION meta-information ...  ✓  checking DESCRIPTION meta-information
-#>   ─  installing the package to build vignettes
-#>      creating vignettes ...  ✓  creating vignettes (2.4s)
-#>   ─  checking for LF line-endings in source and make files and shell scripts
-#>   ─  checking for empty or unneeded directories
-#>   ─  building ‘serosurvr_0.0.0.9000.tar.gz’
-#>      
-#> 
-#> Installing package into '/home/rahul/serotracker/serosurvr/renv/library/R-4.0/x86_64-pc-linux-gnu'
-#> (as 'lib' is unspecified)
+if (FALSE) {
+  library("devtools")
+  devtools::install_github("serotracker/serosurvr", build_vignettes = TRUE)
+}
 library("serosurvr")      # load newest serosurvr
 ```
 ## Get Data
@@ -96,52 +71,55 @@ fs_males_tbl <-
 
 fs_males_tbl
 #> # A tibble: 20 x 90
-#>    academic_primary… age   age_max age_min age_variation  age_variation_m… antibody_target
-#>    <lgl>             <chr>   <dbl>   <dbl> <chr>          <chr>            <list>         
-#>  1 NA                Mult…      NA      NA "57-79"        IQR - interquar… <chr [1]>      
-#>  2 NA                Mult…      NA       5 "16-47"        IQR - interquar… <chr [2]>      
-#>  3 NA                Adul…      NA      NA "11.1"         SD - standard d… <chr [2]>      
-#>  4 NA                Adul…      NA      NA "12.8"         SD - standard d… <chr [1]>      
-#>  5 NA                Adul…      NA      18 "12.43 "       SD - standard d… <chr [1]>      
-#>  6 NA                Mult…      NA       5 "TR: 6-11 Pup… IQR - interquar… <chr [1]>      
-#>  7 NA                Mult…      NA       0  <NA>          <NA>             <chr [1]>      
-#>  8 NA                Adul…      NA      NA "11.6"         SD - standard d… <chr [1]>      
-#>  9 NA                Adul…      NA      NA  <NA>          <NA>             <chr [1]>      
-#> 10 NA                Mult…      88      22 "22-88"        Total Range      <chr [1]>      
-#> 11 NA                Mult…      94       1 "21.79"        SD - standard d… <chr [1]>      
-#> 12 NA                Mult…      NA       0  <NA>          <NA>             <chr [2]>      
-#> 13 NA                Mult…      NA       0  <NA>          <NA>             <chr [2]>      
-#> 14 NA                Mult…      NA       0  <NA>          <NA>             <chr [2]>      
-#> 15 NA                Adul…      NA      NA "12.6"         SD - standard d… <chr [0]>      
-#> 16 NA                Mult…      NA       0 "34-70"        IQR - interquar… <chr [1]>      
-#> 17 NA                Mult…      NA      NA "Children 3.7… SD - standard d… <chr [1]>      
-#> 18 NA                Adul…      65      38 "7.8"          SD - standard d… <chr [1]>      
-#> 19 NA                Mult…      NA      15  <NA>          <NA>             <chr [1]>      
-#> 20 NA                Mult…      NA      18  <NA>          <NA>             <chr [2]>      
-#> # … with 83 more variables: average_age <chr>, case_count_0 <lgl>,
-#> #   case_count_neg14 <lgl>, case_count_neg9 <lgl>, case_population <lgl>,
-#> #   cases_per_hundred <dbl>, city <list>, country <chr>, country_iso3 <chr>,
-#> #   dashboard_primary_estimate <lgl>, date_created <chr>, death_count_plus11 <lgl>,
-#> #   death_count_plus4 <lgl>, deaths_per_hundred <dbl>, deaths_population <lgl>,
-#> #   denominator_value <int>, estimate_grade <chr>, estimate_name <chr>,
+#>    academic_primary… age     age_max age_min age_variation      age_variation_m…
+#>    <lgl>             <chr>     <dbl>   <dbl> <chr>              <chr>           
+#>  1 NA                Multip…      NA      NA "57-79"            IQR - interquar…
+#>  2 NA                Multip…      NA       5 "16-47"            IQR - interquar…
+#>  3 NA                Adults…      NA      NA "11.1"             SD - standard d…
+#>  4 NA                Adults…      NA      NA "12.8"             SD - standard d…
+#>  5 NA                Adults…      NA      18 "12.43 "           SD - standard d…
+#>  6 NA                Multip…      NA       5 "TR: 6-11 Pupils;… IQR - interquar…
+#>  7 NA                Multip…      NA       0  <NA>              <NA>            
+#>  8 NA                Adults…      NA      NA "11.6"             SD - standard d…
+#>  9 NA                Adults…      NA      NA  <NA>              <NA>            
+#> 10 NA                Multip…      88      22 "22-88"            Total Range     
+#> 11 NA                Multip…      94       1 "21.79"            SD - standard d…
+#> 12 NA                Multip…      NA       0  <NA>              <NA>            
+#> 13 NA                Multip…      NA       0  <NA>              <NA>            
+#> 14 NA                Multip…      NA       0  <NA>              <NA>            
+#> 15 NA                Adults…      NA      NA "12.6"             SD - standard d…
+#> 16 NA                Multip…      NA       0 "34-70"            IQR - interquar…
+#> 17 NA                Multip…      NA      NA "Children 3.7; ad… SD - standard d…
+#> 18 NA                Adults…      65      38 "7.8"              SD - standard d…
+#> 19 NA                Multip…      NA      15  <NA>              <NA>            
+#> 20 NA                Multip…      NA      18  <NA>              <NA>            
+#> # … with 84 more variables: antibody_target <list>, average_age <chr>,
+#> #   case_count_0 <lgl>, case_count_neg14 <lgl>, case_count_neg9 <lgl>,
+#> #   case_population <lgl>, cases_per_hundred <dbl>, city <list>, country <chr>,
+#> #   country_iso3 <chr>, dashboard_primary_estimate <lgl>, date_created <chr>,
+#> #   death_count_plus11 <lgl>, death_count_plus4 <lgl>,
+#> #   deaths_per_hundred <dbl>, deaths_population <lgl>, denominator_value <int>,
+#> #   estimate_grade <chr>, estimate_name <chr>,
 #> #   full_vaccinations_per_hundred <lgl>, gbd_region <chr>, gbd_subregion <chr>,
-#> #   genpop <chr>, geo_exact_match <lgl>, ind_eval_lab <chr>, ind_eval_link <chr>,
-#> #   ind_se <dbl>, ind_se_n <dbl>, ind_sp <dbl>, ind_sp_n <dbl>, isotype_comb <chr>,
-#> #   isotypes_reported <list>, jbi_1 <chr>, jbi_2 <chr>, jbi_3 <chr>, jbi_4 <chr>,
-#> #   jbi_5 <chr>, jbi_6 <chr>, jbi_7 <chr>, jbi_8 <chr>, jbi_9 <chr>,
-#> #   last_modified_time <chr>, lmic_hic <chr>, measure_of_age <chr>,
-#> #   number_of_females <int>, number_of_males <int>, numerator_value <dbl>,
-#> #   overall_risk_of_bias <chr>, pin_latitude <dbl>, pin_longitude <dbl>,
-#> #   pin_region_type <chr>, pop_adj <lgl>, population_group <chr>, publication_date <chr>,
-#> #   sample_frame_info <chr>, sampling_end_date <chr>, sampling_start_date <chr>,
-#> #   sampling_type <chr>, se_n <dbl>, seroprev_95_ci_lower <dbl>,
-#> #   seroprev_95_ci_upper <dbl>, serum_pos_prevalence <dbl>, sex <chr>, source_id <chr>,
-#> #   source_name <chr>, source_type <chr>, sp_n <dbl>, specimen_type <chr>, state <list>,
+#> #   genpop <chr>, geo_exact_match <lgl>, ind_eval_lab <chr>,
+#> #   ind_eval_link <chr>, ind_se <dbl>, ind_se_n <dbl>, ind_sp <dbl>,
+#> #   ind_sp_n <dbl>, isotype_comb <chr>, isotypes_reported <list>, jbi_1 <chr>,
+#> #   jbi_2 <chr>, jbi_3 <chr>, jbi_4 <chr>, jbi_5 <chr>, jbi_6 <chr>,
+#> #   jbi_7 <chr>, jbi_8 <chr>, jbi_9 <chr>, last_modified_time <chr>,
+#> #   lmic_hic <chr>, measure_of_age <chr>, number_of_females <int>,
+#> #   number_of_males <int>, numerator_value <dbl>, overall_risk_of_bias <chr>,
+#> #   pin_latitude <dbl>, pin_longitude <dbl>, pin_region_type <chr>,
+#> #   pop_adj <lgl>, population_group <chr>, publication_date <chr>,
+#> #   sample_frame_info <chr>, sampling_end_date <chr>,
+#> #   sampling_start_date <chr>, sampling_type <chr>, se_n <dbl>,
+#> #   seroprev_95_ci_lower <dbl>, seroprev_95_ci_upper <dbl>,
+#> #   serum_pos_prevalence <dbl>, sex <chr>, source_id <chr>, source_name <chr>,
+#> #   source_type <chr>, sp_n <dbl>, specimen_type <chr>, state <list>,
 #> #   study_name <chr>, subgroup_cat <chr>, subgroup_specific_category <chr>,
-#> #   subgroup_var <chr>, superceded <lgl>, test_adj <lgl>, test_linked_uid <chr>,
-#> #   test_manufacturer <list>, test_name <chr>, test_not_linked_reason <chr>,
-#> #   test_type <chr>, test_validation <chr>, tests_per_hundred <lgl>, url <chr>,
-#> #   vaccinations_per_hundred <lgl>
+#> #   subgroup_var <chr>, superceded <lgl>, test_adj <lgl>,
+#> #   test_linked_uid <chr>, test_manufacturer <list>, test_name <chr>,
+#> #   test_not_linked_reason <chr>, test_type <chr>, test_validation <chr>,
+#> #   tests_per_hundred <lgl>, url <chr>, vaccinations_per_hundred <lgl>
 ```
 
 ### Get Filter Options for Data Requests
@@ -276,7 +254,8 @@ serosurvr::filter_options()
 #> [1] "Whole Blood" "Dried Blood" "Plasma"      "Serum"      
 #> 
 #> $test_type
-#> [1] "Neutralization" "CLIA"           "ELISA"          "LFIA"           "Other"         
+#> [1] "Neutralization" "CLIA"           "ELISA"          "LFIA"          
+#> [5] "Other"         
 #> 
 #> $updated_at
 #> [1] "2021-03-09T00:00:00"
@@ -297,50 +276,53 @@ fs_males_tbl_cleaned <-
 
 fs_males_tbl_cleaned
 #> # A tibble: 20 x 90
-#>    academic_primary… age   age_max age_min age_variation  age_variation_m… antibody_target
-#>    <lgl>             <fct>   <int>   <int> <chr>          <fct>            <list>         
-#>  1 NA                Mult…      NA      NA "57-79"        IQR - interquar… <chr [1]>      
-#>  2 NA                Mult…      NA       5 "16-47"        IQR - interquar… <chr [2]>      
-#>  3 NA                Adul…      NA      NA "11.1"         SD - standard d… <chr [2]>      
-#>  4 NA                Adul…      NA      NA "12.8"         SD - standard d… <chr [1]>      
-#>  5 NA                Adul…      NA      18 "12.43 "       SD - standard d… <chr [1]>      
-#>  6 NA                Mult…      NA       5 "TR: 6-11 Pup… IQR - interquar… <chr [1]>      
-#>  7 NA                Mult…      NA       0  <NA>          <NA>             <chr [1]>      
-#>  8 NA                Adul…      NA      NA "11.6"         SD - standard d… <chr [1]>      
-#>  9 NA                Adul…      NA      NA  <NA>          <NA>             <chr [1]>      
-#> 10 NA                Mult…      88      22 "22-88"        Total Range      <chr [1]>      
-#> 11 NA                Mult…      94       1 "21.79"        SD - standard d… <chr [1]>      
-#> 12 NA                Mult…      NA       0  <NA>          <NA>             <chr [2]>      
-#> 13 NA                Mult…      NA       0  <NA>          <NA>             <chr [2]>      
-#> 14 NA                Mult…      NA       0  <NA>          <NA>             <chr [2]>      
-#> 15 NA                Adul…      NA      NA "12.6"         SD - standard d… <chr [0]>      
-#> 16 NA                Mult…      NA       0 "34-70"        IQR - interquar… <chr [1]>      
-#> 17 NA                Mult…      NA      NA "Children 3.7… SD - standard d… <chr [1]>      
-#> 18 NA                Adul…      65      38 "7.8"          SD - standard d… <chr [1]>      
-#> 19 NA                Mult…      NA      15  <NA>          <NA>             <chr [1]>      
-#> 20 NA                Mult…      NA      18  <NA>          <NA>             <chr [2]>      
-#> # … with 83 more variables: average_age <chr>, case_count_0 <dbl>,
-#> #   case_count_neg14 <dbl>, case_count_neg9 <dbl>, case_population <dbl>,
-#> #   cases_per_hundred <dbl>, city <list>, country <chr>, country_iso3 <chr>,
-#> #   dashboard_primary_estimate <lgl>, date_created <date>, death_count_plus11 <dbl>,
-#> #   death_count_plus4 <dbl>, deaths_per_hundred <dbl>, deaths_population <dbl>,
-#> #   denominator_value <int>, estimate_grade <fct>, estimate_name <chr>,
+#>    academic_primary… age     age_max age_min age_variation      age_variation_m…
+#>    <lgl>             <fct>     <int>   <int> <chr>              <fct>           
+#>  1 NA                Multip…      NA      NA "57-79"            IQR - interquar…
+#>  2 NA                Multip…      NA       5 "16-47"            IQR - interquar…
+#>  3 NA                Adults…      NA      NA "11.1"             SD - standard d…
+#>  4 NA                Adults…      NA      NA "12.8"             SD - standard d…
+#>  5 NA                Adults…      NA      18 "12.43 "           SD - standard d…
+#>  6 NA                Multip…      NA       5 "TR: 6-11 Pupils;… IQR - interquar…
+#>  7 NA                Multip…      NA       0  <NA>              <NA>            
+#>  8 NA                Adults…      NA      NA "11.6"             SD - standard d…
+#>  9 NA                Adults…      NA      NA  <NA>              <NA>            
+#> 10 NA                Multip…      88      22 "22-88"            Total Range     
+#> 11 NA                Multip…      94       1 "21.79"            SD - standard d…
+#> 12 NA                Multip…      NA       0  <NA>              <NA>            
+#> 13 NA                Multip…      NA       0  <NA>              <NA>            
+#> 14 NA                Multip…      NA       0  <NA>              <NA>            
+#> 15 NA                Adults…      NA      NA "12.6"             SD - standard d…
+#> 16 NA                Multip…      NA       0 "34-70"            IQR - interquar…
+#> 17 NA                Multip…      NA      NA "Children 3.7; ad… SD - standard d…
+#> 18 NA                Adults…      65      38 "7.8"              SD - standard d…
+#> 19 NA                Multip…      NA      15  <NA>              <NA>            
+#> 20 NA                Multip…      NA      18  <NA>              <NA>            
+#> # … with 84 more variables: antibody_target <list>, average_age <chr>,
+#> #   case_count_0 <dbl>, case_count_neg14 <dbl>, case_count_neg9 <dbl>,
+#> #   case_population <dbl>, cases_per_hundred <dbl>, city <list>, country <chr>,
+#> #   country_iso3 <chr>, dashboard_primary_estimate <lgl>, date_created <date>,
+#> #   death_count_plus11 <dbl>, death_count_plus4 <dbl>,
+#> #   deaths_per_hundred <dbl>, deaths_population <dbl>, denominator_value <int>,
+#> #   estimate_grade <fct>, estimate_name <chr>,
 #> #   full_vaccinations_per_hundred <dbl>, gbd_region <fct>, gbd_subregion <fct>,
-#> #   genpop <fct>, geo_exact_match <lgl>, ind_eval_lab <chr>, ind_eval_link <chr>,
-#> #   ind_se <dbl>, ind_se_n <int>, ind_sp <dbl>, ind_sp_n <int>, isotype_comb <fct>,
-#> #   isotypes_reported <list>, jbi_1 <fct>, jbi_2 <fct>, jbi_3 <fct>, jbi_4 <fct>,
-#> #   jbi_5 <fct>, jbi_6 <fct>, jbi_7 <fct>, jbi_8 <fct>, jbi_9 <fct>,
-#> #   last_modified_time <date>, lmic_hic <fct>, measure_of_age <fct>,
-#> #   number_of_females <int>, number_of_males <int>, numerator_value <int>,
-#> #   overall_risk_of_bias <fct>, pin_latitude <dbl>, pin_longitude <dbl>,
-#> #   pin_region_type <fct>, pop_adj <lgl>, population_group <chr>,
-#> #   publication_date <date>, sample_frame_info <chr>, sampling_end_date <date>,
+#> #   genpop <fct>, geo_exact_match <lgl>, ind_eval_lab <chr>,
+#> #   ind_eval_link <chr>, ind_se <dbl>, ind_se_n <int>, ind_sp <dbl>,
+#> #   ind_sp_n <int>, isotype_comb <fct>, isotypes_reported <list>, jbi_1 <fct>,
+#> #   jbi_2 <fct>, jbi_3 <fct>, jbi_4 <fct>, jbi_5 <fct>, jbi_6 <fct>,
+#> #   jbi_7 <fct>, jbi_8 <fct>, jbi_9 <fct>, last_modified_time <date>,
+#> #   lmic_hic <fct>, measure_of_age <fct>, number_of_females <int>,
+#> #   number_of_males <int>, numerator_value <int>, overall_risk_of_bias <fct>,
+#> #   pin_latitude <dbl>, pin_longitude <dbl>, pin_region_type <fct>,
+#> #   pop_adj <lgl>, population_group <chr>, publication_date <date>,
+#> #   sample_frame_info <chr>, sampling_end_date <date>,
 #> #   sampling_start_date <date>, sampling_type <fct>, se_n <int>,
-#> #   seroprev_95_ci_lower <dbl>, seroprev_95_ci_upper <dbl>, serum_pos_prevalence <dbl>,
-#> #   sex <fct>, source_id <chr>, source_name <chr>, source_type <fct>, sp_n <int>,
-#> #   specimen_type <fct>, state <list>, study_name <chr>, subgroup_cat <chr>,
-#> #   subgroup_specific_category <chr>, subgroup_var <chr>, superceded <lgl>,
-#> #   test_adj <lgl>, test_linked_uid <chr>, test_manufacturer <list>, test_name <chr>,
+#> #   seroprev_95_ci_lower <dbl>, seroprev_95_ci_upper <dbl>,
+#> #   serum_pos_prevalence <dbl>, sex <fct>, source_id <chr>, source_name <chr>,
+#> #   source_type <fct>, sp_n <int>, specimen_type <fct>, state <list>,
+#> #   study_name <chr>, subgroup_cat <chr>, subgroup_specific_category <chr>,
+#> #   subgroup_var <chr>, superceded <lgl>, test_adj <lgl>,
+#> #   test_linked_uid <chr>, test_manufacturer <list>, test_name <chr>,
 #> #   test_not_linked_reason <fct>, test_type <fct>, test_validation <fct>,
 #> #   tests_per_hundred <dbl>, url <chr>, vaccinations_per_hundred <dbl>
 ```
