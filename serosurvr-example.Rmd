@@ -1,11 +1,7 @@
 ---
 title: "serosurvr-example"
 author: "Rahul Arora"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{serosurvr-example}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+output: html_document
 ---
 
 ```{r, include = FALSE}
