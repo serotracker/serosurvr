@@ -15,10 +15,10 @@ vignette: >
 
 ```r
 # whether to import new data or use cached data
-import_new_data = TRUE 
+import_new_data = TRUE
 
 # path to cache folder to read from and write to for this project
-path_to_cache_folder = ".cache/example_analysis" 
+path_to_cache_folder = ".cache/example_analysis"
 
 # set random seed
 set.seed(12345)
@@ -26,7 +26,7 @@ set.seed(12345)
 
 ## Load Necessary Libraries
 
-SeroTracker research code also uses the `tidyverse`, an ecosystem of data analysis tools including libraries like `ggplot2`, `dplyr`, and `tibble`. Prioritize finding and implementing `tidyverse` approaches to your data input, transformation, and plotting needs, where possible. 
+SeroTracker research code also uses the `tidyverse`, an ecosystem of data analysis tools including libraries like `ggplot2`, `dplyr`, and `tibble`. Prioritize finding and implementing `tidyverse` approaches to your data input, transformation, and plotting needs, where possible.
 
 
 ```r
@@ -35,14 +35,39 @@ if (FALSE) {
 }
 ```
 
-The custom `serosurvr` library is contained in a [public GitHub repo](https://github.com/serotracker/serosurvr): `serotracker/serosurvr`. 
+The custom `serosurvr` library is contained in a [public GitHub repo](https://github.com/serotracker/serosurvr): `serotracker/serosurvr`.
 
 
 ```r
 library("devtools")
-devtools::install_github("serotracker/serosurvr")
-#> Skipping install of 'serosurvr' from a github remote, the SHA1 (aff4f239) has not changed since last install.
-#>   Use `force = TRUE` to force installation
+devtools::install_github("serotracker/serosurvr", build_vignettes = TRUE)
+#> Downloading GitHub repo serotracker/serosurvr@HEAD
+#> These packages have more recent versions available.
+#> It is recommended to update all of them.
+#> Which would you like to update?
+#> 
+#> 1: All                                 
+#> 2: CRAN packages only                  
+#> 3: None                                
+#> 4: utf8      (1.1.4   -> 1.2.1 ) [CRAN]
+#> 5: cli       (2.3.0   -> 2.3.1 ) [CRAN]
+#> 6: pillar    (1.5.0   -> 1.5.1 ) [CRAN]
+#> 7: tibble    (3.0.6   -> 3.1.0 ) [CRAN]
+#> 8: lubridate (1.7.9.2 -> 1.7.10) [CRAN]
+#> 9: dplyr     (1.0.4   -> 1.0.5 ) [CRAN]
+#> 
+#>      checking for file ‘/tmp/Rtmp1WSMq0/remotes35d16894408b/serotracker-serosurvr-583a465/DESCRIPTION’ ...  ✓  checking for file ‘/tmp/Rtmp1WSMq0/remotes35d16894408b/serotracker-serosurvr-583a465/DESCRIPTION’
+#>   ─  preparing ‘serosurvr’:
+#>      checking DESCRIPTION meta-information ...  ✓  checking DESCRIPTION meta-information
+#>   ─  installing the package to build vignettes
+#>      creating vignettes ...  ✓  creating vignettes (2.4s)
+#>   ─  checking for LF line-endings in source and make files and shell scripts
+#>   ─  checking for empty or unneeded directories
+#>   ─  building ‘serosurvr_0.0.0.9000.tar.gz’
+#>      
+#> 
+#> Installing package into '/home/rahul/serotracker/serosurvr/renv/library/R-4.0/x86_64-pc-linux-gnu'
+#> (as 'lib' is unspecified)
 library("serosurvr")      # load newest serosurvr
 ```
 ## Get Data
@@ -58,8 +83,8 @@ Sample functions that demonstrate how to get data.
 fs_males_req <- serosurvr::datareq_params(reqname = "france_spain_males",
                                           research_fields = TRUE,
                                           prioritize_estimates = TRUE,
-                                          filters = list(country = 
-                                                           list("France", 
+                                          filters = list(country =
+                                                           list("France",
                                                                 "Spain"),
                                                          sex = list("Male")))
 
@@ -263,7 +288,7 @@ Sample functions that demonstrate how to clean data.
 
 
 ```r
-# enforce_st_dtypes enforces correct dtypes on all columns 
+# enforce_st_dtypes enforces correct dtypes on all columns
 fs_males_tbl_cleaned <-
   fs_males_req %>%
   serosurvr::get_data(import_new_data = import_new_data,

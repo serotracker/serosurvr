@@ -19,10 +19,10 @@ knitr::opts_chunk$set(
 
 ```{r fileopts}
 # whether to import new data or use cached data
-import_new_data = TRUE 
+import_new_data = TRUE
 
 # path to cache folder to read from and write to for this project
-path_to_cache_folder = ".cache/example_analysis" 
+path_to_cache_folder = ".cache/example_analysis"
 
 # set random seed
 set.seed(12345)
@@ -30,7 +30,7 @@ set.seed(12345)
 
 ## Load Necessary Libraries
 
-SeroTracker research code also uses the `tidyverse`, an ecosystem of data analysis tools including libraries like `ggplot2`, `dplyr`, and `tibble`. Prioritize finding and implementing `tidyverse` approaches to your data input, transformation, and plotting needs, where possible. 
+SeroTracker research code also uses the `tidyverse`, an ecosystem of data analysis tools including libraries like `ggplot2`, `dplyr`, and `tibble`. Prioritize finding and implementing `tidyverse` approaches to your data input, transformation, and plotting needs, where possible.
 
 ```{r tidyverse}
 if (FALSE) {
@@ -38,11 +38,11 @@ if (FALSE) {
 }
 ```
 
-The custom `serosurvr` library is contained in a [public GitHub repo](https://github.com/serotracker/serosurvr): `serotracker/serosurvr`. 
+The custom `serosurvr` library is contained in a [public GitHub repo](https://github.com/serotracker/serosurvr): `serotracker/serosurvr`.
 
 ```{r serosurvr}
 library("devtools")
-devtools::install_github("serotracker/serosurvr")
+devtools::install_github("serotracker/serosurvr", build_vignettes = TRUE)
 library("serosurvr")      # load newest serosurvr
 ```
 ## Get Data
@@ -57,8 +57,8 @@ Sample functions that demonstrate how to get data.
 fs_males_req <- serosurvr::datareq_params(reqname = "france_spain_males",
                                           research_fields = TRUE,
                                           prioritize_estimates = TRUE,
-                                          filters = list(country = 
-                                                           list("France", 
+                                          filters = list(country =
+                                                           list("France",
                                                                 "Spain"),
                                                          sex = list("Male")))
 
@@ -85,7 +85,7 @@ serosurvr::filter_options()
 Sample functions that demonstrate how to clean data.
 
 ```{r cleandata}
-# enforce_st_dtypes enforces correct dtypes on all columns 
+# enforce_st_dtypes enforces correct dtypes on all columns
 fs_males_tbl_cleaned <-
   fs_males_req %>%
   serosurvr::get_data(import_new_data = import_new_data,
