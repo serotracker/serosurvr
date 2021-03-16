@@ -1,0 +1,321 @@
+---
+title: "serosurvr-example"
+author: "Rahul Arora"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{serosurvr-example}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+
+## Set File Options
+
+
+```r
+# whether to import new data or use cached data
+import_new_data = TRUE 
+
+# path to cache folder to read from and write to for this project
+path_to_cache_folder = ".cache/example_analysis" 
+
+# set random seed
+set.seed(12345)
+```
+
+## Load Necessary Libraries
+
+SeroTracker research code also uses the `tidyverse`, an ecosystem of data analysis tools including libraries like `ggplot2`, `dplyr`, and `tibble`. Prioritize finding and implementing `tidyverse` approaches to your data input, transformation, and plotting needs, where possible. 
+
+
+```r
+if (FALSE) {
+  library(tidyverse)
+}
+```
+
+The custom `serosurvr` library is contained in a [public GitHub repo](https://github.com/serotracker/serosurvr): `serotracker/serosurvr`. 
+
+
+```r
+library("devtools")
+devtools::install_github("serotracker/serosurvr")
+#> Skipping install of 'serosurvr' from a github remote, the SHA1 (aff4f239) has not changed since last install.
+#>   Use `force = TRUE` to force installation
+library("serosurvr")      # load newest serosurvr
+```
+## Get Data
+
+### Sample Data Request
+
+Sample functions that demonstrate how to get data.
+
+
+```r
+
+#create a data request
+fs_males_req <- serosurvr::datareq_params(reqname = "france_spain_males",
+                                          research_fields = TRUE,
+                                          prioritize_estimates = TRUE,
+                                          filters = list(country = 
+                                                           list("France", 
+                                                                "Spain"),
+                                                         sex = list("Male")))
+
+# pipe data request to get_data function to request data
+fs_males_tbl <-
+  fs_males_req %>%
+  serosurvr::get_data(import_new_data = import_new_data,
+                      path_to_cache_folder = path_to_cache_folder)
+
+fs_males_tbl
+#> # A tibble: 20 x 90
+#>    academic_primary… age   age_max age_min age_variation  age_variation_m… antibody_target
+#>    <lgl>             <chr>   <dbl>   <dbl> <chr>          <chr>            <list>         
+#>  1 NA                Mult…      NA      NA "57-79"        IQR - interquar… <chr [1]>      
+#>  2 NA                Mult…      NA       5 "16-47"        IQR - interquar… <chr [2]>      
+#>  3 NA                Adul…      NA      NA "11.1"         SD - standard d… <chr [2]>      
+#>  4 NA                Adul…      NA      NA "12.8"         SD - standard d… <chr [1]>      
+#>  5 NA                Adul…      NA      18 "12.43 "       SD - standard d… <chr [1]>      
+#>  6 NA                Mult…      NA       5 "TR: 6-11 Pup… IQR - interquar… <chr [1]>      
+#>  7 NA                Mult…      NA       0  <NA>          <NA>             <chr [1]>      
+#>  8 NA                Adul…      NA      NA "11.6"         SD - standard d… <chr [1]>      
+#>  9 NA                Adul…      NA      NA  <NA>          <NA>             <chr [1]>      
+#> 10 NA                Mult…      88      22 "22-88"        Total Range      <chr [1]>      
+#> 11 NA                Mult…      94       1 "21.79"        SD - standard d… <chr [1]>      
+#> 12 NA                Mult…      NA       0  <NA>          <NA>             <chr [2]>      
+#> 13 NA                Mult…      NA       0  <NA>          <NA>             <chr [2]>      
+#> 14 NA                Mult…      NA       0  <NA>          <NA>             <chr [2]>      
+#> 15 NA                Adul…      NA      NA "12.6"         SD - standard d… <chr [0]>      
+#> 16 NA                Mult…      NA       0 "34-70"        IQR - interquar… <chr [1]>      
+#> 17 NA                Mult…      NA      NA "Children 3.7… SD - standard d… <chr [1]>      
+#> 18 NA                Adul…      65      38 "7.8"          SD - standard d… <chr [1]>      
+#> 19 NA                Mult…      NA      15  <NA>          <NA>             <chr [1]>      
+#> 20 NA                Mult…      NA      18  <NA>          <NA>             <chr [2]>      
+#> # … with 83 more variables: average_age <chr>, case_count_0 <lgl>,
+#> #   case_count_neg14 <lgl>, case_count_neg9 <lgl>, case_population <lgl>,
+#> #   cases_per_hundred <dbl>, city <list>, country <chr>, country_iso3 <chr>,
+#> #   dashboard_primary_estimate <lgl>, date_created <chr>, death_count_plus11 <lgl>,
+#> #   death_count_plus4 <lgl>, deaths_per_hundred <dbl>, deaths_population <lgl>,
+#> #   denominator_value <int>, estimate_grade <chr>, estimate_name <chr>,
+#> #   full_vaccinations_per_hundred <lgl>, gbd_region <chr>, gbd_subregion <chr>,
+#> #   genpop <chr>, geo_exact_match <lgl>, ind_eval_lab <chr>, ind_eval_link <chr>,
+#> #   ind_se <dbl>, ind_se_n <dbl>, ind_sp <dbl>, ind_sp_n <dbl>, isotype_comb <chr>,
+#> #   isotypes_reported <list>, jbi_1 <chr>, jbi_2 <chr>, jbi_3 <chr>, jbi_4 <chr>,
+#> #   jbi_5 <chr>, jbi_6 <chr>, jbi_7 <chr>, jbi_8 <chr>, jbi_9 <chr>,
+#> #   last_modified_time <chr>, lmic_hic <chr>, measure_of_age <chr>,
+#> #   number_of_females <int>, number_of_males <int>, numerator_value <dbl>,
+#> #   overall_risk_of_bias <chr>, pin_latitude <dbl>, pin_longitude <dbl>,
+#> #   pin_region_type <chr>, pop_adj <lgl>, population_group <chr>, publication_date <chr>,
+#> #   sample_frame_info <chr>, sampling_end_date <chr>, sampling_start_date <chr>,
+#> #   sampling_type <chr>, se_n <dbl>, seroprev_95_ci_lower <dbl>,
+#> #   seroprev_95_ci_upper <dbl>, serum_pos_prevalence <dbl>, sex <chr>, source_id <chr>,
+#> #   source_name <chr>, source_type <chr>, sp_n <dbl>, specimen_type <chr>, state <list>,
+#> #   study_name <chr>, subgroup_cat <chr>, subgroup_specific_category <chr>,
+#> #   subgroup_var <chr>, superceded <lgl>, test_adj <lgl>, test_linked_uid <chr>,
+#> #   test_manufacturer <list>, test_name <chr>, test_not_linked_reason <chr>,
+#> #   test_type <chr>, test_validation <chr>, tests_per_hundred <lgl>, url <chr>,
+#> #   vaccinations_per_hundred <lgl>
+```
+
+### Get Filter Options for Data Requests
+
+Get a list of the filter options that can be used in data requests.
+
+
+```r
+serosurvr::filter_options()
+#> $age
+#> [1] "Adults (18-64 years)"            "Children and Youth (0-17 years)"
+#> [3] "Seniors (65+ years)"            
+#> 
+#> $country
+#>  [1] "Andorra"                                                 
+#>  [2] "Argentina"                                               
+#>  [3] "Armenia"                                                 
+#>  [4] "Australia"                                               
+#>  [5] "Austria"                                                 
+#>  [6] "Belgium"                                                 
+#>  [7] "Brazil"                                                  
+#>  [8] "Bulgaria"                                                
+#>  [9] "Canada"                                                  
+#> [10] "Chile"                                                   
+#> [11] "China"                                                   
+#> [12] "Colombia"                                                
+#> [13] "Congo"                                                   
+#> [14] "Croatia"                                                 
+#> [15] "Cuba"                                                    
+#> [16] "Czechia"                                                 
+#> [17] "Côte d'Ivoire"                                           
+#> [18] "Democratic Republic of the Congo"                        
+#> [19] "Denmark"                                                 
+#> [20] "Dominican Republic"                                      
+#> [21] "Ecuador"                                                 
+#> [22] "Egypt"                                                   
+#> [23] "Estonia"                                                 
+#> [24] "Ethiopia"                                                
+#> [25] "Faroe Islands"                                           
+#> [26] "Finland"                                                 
+#> [27] "France"                                                  
+#> [28] "French Guiana"                                           
+#> [29] "Georgia"                                                 
+#> [30] "Germany"                                                 
+#> [31] "Greece"                                                  
+#> [32] "Hungary"                                                 
+#> [33] "Iceland"                                                 
+#> [34] "India"                                                   
+#> [35] "Iran (Islamic Republic of)"                              
+#> [36] "Ireland"                                                 
+#> [37] "Israel"                                                  
+#> [38] "Italy"                                                   
+#> [39] "Japan"                                                   
+#> [40] "Jersey"                                                  
+#> [41] "Jordan"                                                  
+#> [42] "Kenya"                                                   
+#> [43] "Kuwait"                                                  
+#> [44] "Latvia"                                                  
+#> [45] "Libya"                                                   
+#> [46] "Liechtenstein"                                           
+#> [47] "Lithuania"                                               
+#> [48] "Luxembourg"                                              
+#> [49] "Malawi"                                                  
+#> [50] "Malaysia"                                                
+#> [51] "Mexico"                                                  
+#> [52] "Netherlands"                                             
+#> [53] "New Zealand"                                             
+#> [54] "Nigeria"                                                 
+#> [55] "Norway"                                                  
+#> [56] "Pakistan"                                                
+#> [57] "Peru"                                                    
+#> [58] "Poland"                                                  
+#> [59] "Portugal"                                                
+#> [60] "Qatar"                                                   
+#> [61] "Republic of Korea"                                       
+#> [62] "Romania"                                                 
+#> [63] "Russian Federation"                                      
+#> [64] "Saudi Arabia"                                            
+#> [65] "Singapore"                                               
+#> [66] "South Africa"                                            
+#> [67] "Spain"                                                   
+#> [68] "Sweden"                                                  
+#> [69] "Switzerland"                                             
+#> [70] "Thailand"                                                
+#> [71] "The United Kingdom"                                      
+#> [72] "Togo"                                                    
+#> [73] "Turkey"                                                  
+#> [74] "United States of America"                                
+#> [75] "Viet Nam"                                                
+#> [76] "Zambia"                                                  
+#> [77] "occupied Palestinian territory, including east Jerusalem"
+#> 
+#> $estimate_grade
+#> [1] "National" "Regional" "Local"    "Sublocal"
+#> 
+#> $max_date
+#> [1] "2021-10-17T00:00:00"
+#> 
+#> $min_date
+#> [1] "2006-07-20T00:00:00"
+#> 
+#> $overall_risk_of_bias
+#> [1] "Low"      "Moderate" "High"     "Unclear" 
+#> 
+#> $population_group
+#>  [1] "Blood donors"                                  
+#>  [2] "Household and community samples"               
+#>  [3] "Residual sera"                                 
+#>  [4] "Assisted living and long-term care facilities" 
+#>  [5] "Students and Daycares"                         
+#>  [6] "Contacts of COVID patients"                    
+#>  [7] "Non-essential workers and unemployed persons"  
+#>  [8] "Essential non-healthcare workers"              
+#>  [9] "Hospital visitors"                             
+#> [10] "Persons who are incarcerated"                  
+#> [11] "Persons living in slums"                       
+#> [12] "Pregnant or parturient women"                  
+#> [13] "Perinatal"                                     
+#> [14] "Patients seeking care for non-COVID-19 reasons"
+#> [15] "Household and community samples"               
+#> [16] "Health care workers and caregivers"            
+#> [17] "Family of essential workers"                   
+#> 
+#> $sex
+#> [1] "Female" "Male"   "Other" 
+#> 
+#> $source_type
+#> [1] "Journal Article (Peer-Reviewed)" "Preprint"                       
+#> [3] "Institutional Report"            "News and Media"                 
+#> 
+#> $specimen_type
+#> [1] "Whole Blood" "Dried Blood" "Plasma"      "Serum"      
+#> 
+#> $test_type
+#> [1] "Neutralization" "CLIA"           "ELISA"          "LFIA"           "Other"         
+#> 
+#> $updated_at
+#> [1] "2021-03-09T00:00:00"
+```
+
+## Clean Data
+
+Sample functions that demonstrate how to clean data.
+
+
+```r
+# enforce_st_dtypes enforces correct dtypes on all columns 
+fs_males_tbl_cleaned <-
+  fs_males_req %>%
+  serosurvr::get_data(import_new_data = import_new_data,
+                      path_to_cache_folder = path_to_cache_folder) %>%
+  serosurvr::enforce_st_dtypes()
+
+fs_males_tbl_cleaned
+#> # A tibble: 20 x 90
+#>    academic_primary… age   age_max age_min age_variation  age_variation_m… antibody_target
+#>    <lgl>             <fct>   <int>   <int> <chr>          <fct>            <list>         
+#>  1 NA                Mult…      NA      NA "57-79"        IQR - interquar… <chr [1]>      
+#>  2 NA                Mult…      NA       5 "16-47"        IQR - interquar… <chr [2]>      
+#>  3 NA                Adul…      NA      NA "11.1"         SD - standard d… <chr [2]>      
+#>  4 NA                Adul…      NA      NA "12.8"         SD - standard d… <chr [1]>      
+#>  5 NA                Adul…      NA      18 "12.43 "       SD - standard d… <chr [1]>      
+#>  6 NA                Mult…      NA       5 "TR: 6-11 Pup… IQR - interquar… <chr [1]>      
+#>  7 NA                Mult…      NA       0  <NA>          <NA>             <chr [1]>      
+#>  8 NA                Adul…      NA      NA "11.6"         SD - standard d… <chr [1]>      
+#>  9 NA                Adul…      NA      NA  <NA>          <NA>             <chr [1]>      
+#> 10 NA                Mult…      88      22 "22-88"        Total Range      <chr [1]>      
+#> 11 NA                Mult…      94       1 "21.79"        SD - standard d… <chr [1]>      
+#> 12 NA                Mult…      NA       0  <NA>          <NA>             <chr [2]>      
+#> 13 NA                Mult…      NA       0  <NA>          <NA>             <chr [2]>      
+#> 14 NA                Mult…      NA       0  <NA>          <NA>             <chr [2]>      
+#> 15 NA                Adul…      NA      NA "12.6"         SD - standard d… <chr [0]>      
+#> 16 NA                Mult…      NA       0 "34-70"        IQR - interquar… <chr [1]>      
+#> 17 NA                Mult…      NA      NA "Children 3.7… SD - standard d… <chr [1]>      
+#> 18 NA                Adul…      65      38 "7.8"          SD - standard d… <chr [1]>      
+#> 19 NA                Mult…      NA      15  <NA>          <NA>             <chr [1]>      
+#> 20 NA                Mult…      NA      18  <NA>          <NA>             <chr [2]>      
+#> # … with 83 more variables: average_age <chr>, case_count_0 <dbl>,
+#> #   case_count_neg14 <dbl>, case_count_neg9 <dbl>, case_population <dbl>,
+#> #   cases_per_hundred <dbl>, city <list>, country <chr>, country_iso3 <chr>,
+#> #   dashboard_primary_estimate <lgl>, date_created <date>, death_count_plus11 <dbl>,
+#> #   death_count_plus4 <dbl>, deaths_per_hundred <dbl>, deaths_population <dbl>,
+#> #   denominator_value <int>, estimate_grade <fct>, estimate_name <chr>,
+#> #   full_vaccinations_per_hundred <dbl>, gbd_region <fct>, gbd_subregion <fct>,
+#> #   genpop <fct>, geo_exact_match <lgl>, ind_eval_lab <chr>, ind_eval_link <chr>,
+#> #   ind_se <dbl>, ind_se_n <int>, ind_sp <dbl>, ind_sp_n <int>, isotype_comb <fct>,
+#> #   isotypes_reported <list>, jbi_1 <fct>, jbi_2 <fct>, jbi_3 <fct>, jbi_4 <fct>,
+#> #   jbi_5 <fct>, jbi_6 <fct>, jbi_7 <fct>, jbi_8 <fct>, jbi_9 <fct>,
+#> #   last_modified_time <date>, lmic_hic <fct>, measure_of_age <fct>,
+#> #   number_of_females <int>, number_of_males <int>, numerator_value <int>,
+#> #   overall_risk_of_bias <fct>, pin_latitude <dbl>, pin_longitude <dbl>,
+#> #   pin_region_type <fct>, pop_adj <lgl>, population_group <chr>,
+#> #   publication_date <date>, sample_frame_info <chr>, sampling_end_date <date>,
+#> #   sampling_start_date <date>, sampling_type <fct>, se_n <int>,
+#> #   seroprev_95_ci_lower <dbl>, seroprev_95_ci_upper <dbl>, serum_pos_prevalence <dbl>,
+#> #   sex <fct>, source_id <chr>, source_name <chr>, source_type <fct>, sp_n <int>,
+#> #   specimen_type <fct>, state <list>, study_name <chr>, subgroup_cat <chr>,
+#> #   subgroup_specific_category <chr>, subgroup_var <chr>, superceded <lgl>,
+#> #   test_adj <lgl>, test_linked_uid <chr>, test_manufacturer <list>, test_name <chr>,
+#> #   test_not_linked_reason <fct>, test_type <fct>, test_validation <fct>,
+#> #   tests_per_hundred <dbl>, url <chr>, vaccinations_per_hundred <dbl>
+```

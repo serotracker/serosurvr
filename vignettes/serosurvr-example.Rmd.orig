@@ -1,0 +1,96 @@
+---
+title: "serosurvr-example"
+author: "Rahul Arora"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{serosurvr-example}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Set File Options
+
+```{r fileopts}
+# whether to import new data or use cached data
+import_new_data = TRUE 
+
+# path to cache folder to read from and write to for this project
+path_to_cache_folder = ".cache/example_analysis" 
+
+# set random seed
+set.seed(12345)
+```
+
+## Load Necessary Libraries
+
+SeroTracker research code also uses the `tidyverse`, an ecosystem of data analysis tools including libraries like `ggplot2`, `dplyr`, and `tibble`. Prioritize finding and implementing `tidyverse` approaches to your data input, transformation, and plotting needs, where possible. 
+
+```{r tidyverse}
+if (FALSE) {
+  library(tidyverse)
+}
+```
+
+The custom `serosurvr` library is contained in a [public GitHub repo](https://github.com/serotracker/serosurvr): `serotracker/serosurvr`. 
+
+```{r serosurvr}
+library("devtools")
+devtools::install_github("serotracker/serosurvr")
+library("serosurvr")      # load newest serosurvr
+```
+## Get Data
+
+### Sample Data Request
+
+Sample functions that demonstrate how to get data.
+
+```{r getdata}
+
+#create a data request
+fs_males_req <- serosurvr::datareq_params(reqname = "france_spain_males",
+                                          research_fields = TRUE,
+                                          prioritize_estimates = TRUE,
+                                          filters = list(country = 
+                                                           list("France", 
+                                                                "Spain"),
+                                                         sex = list("Male")))
+
+# pipe data request to get_data function to request data
+fs_males_tbl <-
+  fs_males_req %>%
+  serosurvr::get_data(import_new_data = import_new_data,
+                      path_to_cache_folder = path_to_cache_folder)
+
+fs_males_tbl
+
+```
+
+### Get Filter Options for Data Requests
+
+Get a list of the filter options that can be used in data requests.
+
+```{r filtopts}
+serosurvr::filter_options()
+```
+
+## Clean Data
+
+Sample functions that demonstrate how to clean data.
+
+```{r cleandata}
+# enforce_st_dtypes enforces correct dtypes on all columns 
+fs_males_tbl_cleaned <-
+  fs_males_req %>%
+  serosurvr::get_data(import_new_data = import_new_data,
+                      path_to_cache_folder = path_to_cache_folder) %>%
+  serosurvr::enforce_st_dtypes()
+
+fs_males_tbl_cleaned
+```
