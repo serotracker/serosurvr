@@ -4,6 +4,12 @@
 #' @param reqname Request name. Used as an identifier and for caching.
 #' @param research_fields Should research fields be pulled? Defaults to TRUE
 #' @param prioritize_estimates Should one priority estimate per study be returned (TRUE), or all estimates (FALSE)? Defaults to FALSE.
+#' @param prioritize_estimates_mode What mode should be used to prioritize estimates? Defaults to 'analysis_dynamic'; other options are 'analysis_static' and 'dashboard'
+#' @param columns List or empty; if not empty, returns only the specified columns
+#' @param sampling_start_date Filter results by sampling_start_date; format: YYYY-MM-DD
+#' @param sampling_end_date Filter results by sampling_end_date; format: YYYY-MM-DD
+#' @param publication_start_date Filter results by publication_start_date; format: YYYY-MM-DD
+#' @param publication_end_date Filter results by publication_end_date; format: YYYY-MM-DD
 #' @param filters Named list, with filter names and a list of allowed options for that filter
 #' @seealso [serosurvr::get_data] which takes these params as input
 #' @keywords import
@@ -17,16 +23,38 @@
 datareq_params <- function(reqname = character(),
                            research_fields = TRUE,
                            prioritize_estimates = FALSE,
+                           prioritize_estimates_mode = 'analysis_dynamic',
+                           columns = NULL,
+                           sampling_start_date = NULL,
+                           sampling_end_date = NULL,
+                           publication_start_date = NULL,
+                           publication_end_date = NULL,
                            filters = list()) {
   stopifnot(is.character(reqname) &
-              is.logical(research_fields) &
-              is.logical(prioritize_estimates) &
-              is.list(filters))
+            is.logical(research_fields) &
+            is.logical(prioritize_estimates) &
+            is.character(prioritize_estimates_mode) &
+            (is.list(columns) | is.null(columns)) &
+            (is.character(sampling_start_date) | is.null(sampling_start_date)) &
+            (is.character(sampling_end_date) | is.null(sampling_end_date)) &
+            (is.character(publication_start_date) | is.null(publication_start_date)) &
+            (is.character(publication_end_date) | is.null(publication_end_date)) &
+            is.list(filters))
+
+  params <- list(research_fields = research_fields,
+                 prioritize_estimates = prioritize_estimates,
+                 prioritize_estimates_mode = prioritize_estimates_mode,
+                 columns = columns,
+                 sampling_start_date = sampling_start_date,
+                 sampling_end_date = sampling_end_date,
+                 publication_start_date = publication_start_date,
+                 publication_end_date = publication_end_date,
+                 filters = filters)
+
+  params <- params[!sapply(params, is.null)]
 
   structure(
-    list(research_fields = research_fields,
-         prioritize_estimates = prioritize_estimates,
-         filters = filters),
+    params,
     reqname = reqname,
     class = "datareq_params"
   )
@@ -105,8 +133,8 @@ get_data <- function(params,
                      import_new_data,
                      path_to_cache_folder) {
   stopifnot(inherits(params, "datareq_params") &
-              is.logical(import_new_data) &
-              is.character(path_to_cache_folder))
+            is.logical(import_new_data) &
+            is.character(path_to_cache_folder))
 
   reqname <- attr(params, "reqname")
   path_to_cache_file = fs::path(path_to_cache_folder,

@@ -8,6 +8,12 @@ datareq_params(
   reqname = character(),
   research_fields = TRUE,
   prioritize_estimates = FALSE,
+  prioritize_estimates_mode = "analysis_dynamic",
+  columns = NULL,
+  sampling_start_date = NULL,
+  sampling_end_date = NULL,
+  publication_start_date = NULL,
+  publication_end_date = NULL,
   filters = list()
 )
 }
@@ -17,6 +23,18 @@ datareq_params(
 \item{research_fields}{Should research fields be pulled? Defaults to TRUE}
 
 \item{prioritize_estimates}{Should one priority estimate per study be returned (TRUE), or all estimates (FALSE)? Defaults to FALSE.}
+
+\item{prioritize_estimates_mode}{What mode should be used to prioritize estimates? Defaults to 'analysis_dynamic'; other options are 'analysis_static' and 'dashboard'}
+
+\item{columns}{List or empty; if not empty, returns only the specified columns}
+
+\item{sampling_start_date}{Filter results by sampling_start_date; format: YYYY-MM-DD}
+
+\item{sampling_end_date}{Filter results by sampling_end_date; format: YYYY-MM-DD}
+
+\item{publication_start_date}{Filter results by publication_start_date; format: YYYY-MM-DD}
+
+\item{publication_end_date}{Filter results by publication_end_date; format: YYYY-MM-DD}
 
 \item{filters}{Named list, with filter names and a list of allowed options for that filter}
 }

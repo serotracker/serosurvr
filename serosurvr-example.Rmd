@@ -29,18 +29,14 @@ set.seed(12345)
 SeroTracker research code also uses the `tidyverse`, an ecosystem of data analysis tools including libraries like `ggplot2`, `dplyr`, and `tibble`. Prioritize finding and implementing `tidyverse` approaches to your data input, transformation, and plotting needs, where possible.
 
 ```{r tidyverse}
-if (FALSE) {
-  library(tidyverse)
-}
+library(tidyverse)
 ```
 
 The custom `serosurvr` library is contained in a [public GitHub repo](https://github.com/serotracker/serosurvr): `serotracker/serosurvr`.
 
 ```{r serosurvr}
-if (FALSE) {
-  library("devtools")
-  devtools::install_github("serotracker/serosurvr", build_vignettes = TRUE)
-}
+library("devtools")
+devtools::install_github("serotracker/serosurvr")
 library("serosurvr")      # load newest serosurvr
 ```
 ## Get Data
@@ -55,10 +51,9 @@ Sample functions that demonstrate how to get data.
 fs_males_req <- serosurvr::datareq_params(reqname = "france_spain_males",
                                           research_fields = TRUE,
                                           prioritize_estimates = TRUE,
-                                          filters = list(country =
-                                                           list("France",
-                                                                "Spain"),
-                                                         sex = list("Male")))
+                                          prioritize_estimates_mode = "analysis_dynamic",
+                                          publication_end_date = "2020-12-31",
+                                          filters = list())
 
 # pipe data request to get_data function to request data
 fs_males_tbl <-
@@ -91,4 +86,8 @@ fs_males_tbl_cleaned <-
   serosurvr::enforce_st_dtypes()
 
 fs_males_tbl_cleaned
+```
+
+```{r uniquevals}
+unique(fs_males_tbl$population_group)
 ```
