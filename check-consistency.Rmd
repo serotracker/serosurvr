@@ -20,6 +20,7 @@ n <- 10
 dims <- vector("list", n)
 unique_estimates <- vector("list", n)
 dims_distinct <- vector("list", n)
+unique_estimate_names <- vector("list", n)
 for (i in 1:n) {
   ca_req <- datareq_params(
   reqname = "CA_est",
@@ -33,11 +34,21 @@ for (i in 1:n) {
   dims[[i]] <- dim(ca_tbl_raw)[[1]]
   unique_estimates[[i]] <- dplyr::n_distinct(ca_tbl_raw$estimate_name)
   dims_distinct[[i]] <- dim(dplyr::distinct(ca_tbl_raw))[[1]]
+  
+  unique_estimate_names[[i]] <- ca_tbl_raw %>%
+    group_by(estimate_name) %>% 
+    filter(n() > 1) %>% 
+    ungroup() %>% 
+    select(estimate_name) %>%
+    c
 }
 
 unlist(dims)
 unlist(unique_estimates)
 unlist(dims_distinct)
+estimate_names <- unlist(unique_estimate_names) %>%
+  as_tibble() %>%
+  readr::write_csv('check-consistency-estimate-names.csv')
 ```
 
 Check consistency of outputs directly from the endpoint
