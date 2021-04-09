@@ -1,0 +1,76 @@
+---
+title: "check-consistency.Rmd"
+author: "Rahul Arora, Julia Ma"
+date: '2021-04-09'
+output: html_document
+---
+
+```{r load}
+library("devtools")
+devtools::install_github("serotracker/serosurvr")
+library("serosurvr")  
+library("dplyr")
+```
+
+Check consistency of results from datareq_params
+
+```{r test-wrapper}
+
+n <- 10
+dims <- vector("list", n)
+unique_estimates <- vector("list", n)
+dims_distinct <- vector("list", n)
+for (i in 1:n) {
+  ca_req <- datareq_params(
+  reqname = "CA_est",
+  research_fields = TRUE,
+  prioritize_estimates = FALSE,
+  filters = list(country = list("Canada")))
+
+  ca_tbl_raw <- ca_req %>%
+    get_data(import_new_data = T, path_to_cache_folder = '.cache')
+  
+  dims[[i]] <- dim(ca_tbl_raw)[[1]]
+  unique_estimates[[i]] <- dplyr::n_distinct(ca_tbl_raw$estimate_name)
+  dims_distinct[[i]] <- dim(dplyr::distinct(ca_tbl_raw))[[1]]
+}
+
+unlist(dims)
+unlist(unique_estimates)
+unlist(dims_distinct)
+```
+
+Check consistency of outputs directly from the endpoint
+
+```{r test-base}
+url <- Sys.getenv("RECORDS_URL")
+
+params <- list(research_fields = TRUE,
+               prioritize_estimates = FALSE,
+               prioritize_estimates_mode = 'analysis_dynamic',
+               filters = list(country = list("Canada")))
+
+n <- 10
+dims <- vector("list", n)
+unique_estimates <- vector("list", n)
+dims_distinct <- vector("list", n)
+for (i in 1:n) {
+  response <- httr::POST(url = url,
+                       body = params,
+                       encode = "json")
+
+  result <- httr::content(response,
+                          as = "text",
+                          encoding = "UTF-8")
+  
+  result <- jsonlite::fromJSON(result, simplifyDataFrame = TRUE)
+  
+  dims[[i]] <- dim(result)[[1]]
+  unique_estimates[[i]] <- dplyr::n_distinct(result$estimate_name)
+  dims_distinct[[i]] <- dim(dplyr::distinct(result))[[1]]
+}
+
+unlist(dims)
+unlist(unique_estimates)
+unlist(dims_distinct)
+```
