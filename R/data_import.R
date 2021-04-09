@@ -10,6 +10,9 @@
 #' @param sampling_end_date Filter results by sampling_end_date; format: YYYY-MM-DD
 #' @param publication_start_date Filter results by publication_start_date; format: YYYY-MM-DD
 #' @param publication_end_date Filter results by publication_end_date; format: YYYY-MM-DD
+#' @param include_in_srma Whether to filter results by a custom variable in AirTable;
+#' not recommended to use this unless you have confirmed that the AirTable flag you are using
+#' is properly configured to work with this variable
 #' @param filters Named list, with filter names and a list of allowed options for that filter
 #' @seealso [serosurvr::get_data] which takes these params as input
 #' @keywords import
@@ -29,6 +32,7 @@ datareq_params <- function(reqname = character(),
                            sampling_end_date = NULL,
                            publication_start_date = NULL,
                            publication_end_date = NULL,
+                           include_in_srma = NULL,
                            filters = list()) {
   stopifnot(is.character(reqname) &
             is.logical(research_fields) &
@@ -39,6 +43,7 @@ datareq_params <- function(reqname = character(),
             (is.character(sampling_end_date) | is.null(sampling_end_date)) &
             (is.character(publication_start_date) | is.null(publication_start_date)) &
             (is.character(publication_end_date) | is.null(publication_end_date)) &
+            (is.logical(include_in_srma) | is.null(include_in_srma)) &
             is.list(filters))
 
   params <- list(research_fields = research_fields,
@@ -49,6 +54,7 @@ datareq_params <- function(reqname = character(),
                  sampling_end_date = sampling_end_date,
                  publication_start_date = publication_start_date,
                  publication_end_date = publication_end_date,
+                 include_in_srma = include_in_srma,
                  filters = filters)
 
   params <- params[!sapply(params, is.null)]
@@ -119,6 +125,9 @@ retrieve_data <- function(endpoint, params = NA) {
 #' Otherwise, new data is loaded from the `path_to_cache_folder`.
 #' @param params [serosurvr::datareq_params] object itemizing request parameters
 #' @param import_new_data logical: requests data from server if TRUE, from cache if FALSE
+#' Note that if import_new_data is TRUE, data will be repeatedly requested from server
+#' even if a cache is present, and that cache will be overwritten
+#' import_new_data must be set to FALSE to use cached data
 #' @param path_to_cache_folder path to cache new data to, or read cache from
 #' @seealso calls [serosurvr::retrieve_data]
 #' @keywords import

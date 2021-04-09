@@ -14,6 +14,7 @@ datareq_params(
   sampling_end_date = NULL,
   publication_start_date = NULL,
   publication_end_date = NULL,
+  include_in_srma = NULL,
   filters = list()
 )
 }
@@ -35,6 +36,10 @@ datareq_params(
 \item{publication_start_date}{Filter results by publication_start_date; format: YYYY-MM-DD}
 
 \item{publication_end_date}{Filter results by publication_end_date; format: YYYY-MM-DD}
+
+\item{include_in_srma}{Whether to filter results by a custom variable in AirTable;
+not recommended to use this unless you have confirmed that the AirTable flag you are using
+is properly configured to work with this variable}
 
 \item{filters}{Named list, with filter names and a list of allowed options for that filter}
 }

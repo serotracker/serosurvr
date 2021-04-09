@@ -9,7 +9,10 @@ get_data(params, import_new_data, path_to_cache_folder)
 \arguments{
 \item{params}{\link{datareq_params} object itemizing request parameters}
 
-\item{import_new_data}{logical: requests data from server if TRUE, from cache if FALSE}
+\item{import_new_data}{logical: requests data from server if TRUE, from cache if FALSE
+Note that if import_new_data is TRUE, data will be repeatedly requested from server
+even if a cache is present, and that cache will be overwritten
+import_new_data must be set to FALSE to use cached data}
 
 \item{path_to_cache_folder}{path to cache new data to, or read cache from}
 }
