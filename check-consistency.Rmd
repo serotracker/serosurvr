@@ -20,7 +20,10 @@ n <- 10
 dims <- vector("list", n)
 unique_estimates <- vector("list", n)
 dims_distinct <- vector("list", n)
-unique_estimate_names <- vector("list", n)
+dims_distinct_droplist <- vector("list", n)
+unique_estimate_tbl <- vector("list", n)
+all_tbls <- vector("list", n)
+
 for (i in 1:n) {
   ca_req <- datareq_params(
   reqname = "CA_est",
@@ -35,20 +38,98 @@ for (i in 1:n) {
   unique_estimates[[i]] <- dplyr::n_distinct(ca_tbl_raw$estimate_name)
   dims_distinct[[i]] <- dim(dplyr::distinct(ca_tbl_raw))[[1]]
   
-  unique_estimate_names[[i]] <- ca_tbl_raw %>%
+  dims_distinct_droplist[[i]] <- ca_tbl_raw %>%
+    select(!c(state, pin_latitude, pin_longitude, 
+              antibody_target, test_manufacturer)) %>%
+    distinct() %>%
+    dim(.) %>% 
+    .[[1]]
+  
+  unique_estimate_tbl[[i]] <- ca_tbl_raw %>%
+    distinct() %>%
     group_by(estimate_name) %>% 
     filter(n() > 1) %>% 
-    ungroup() %>% 
-    select(estimate_name) %>%
-    c
+    ungroup() 
+  
+  all_tbls[[i]] <- ca_tbl_raw
 }
 
+```
+
+```{r process-endpoint}
 unlist(dims)
 unlist(unique_estimates)
 unlist(dims_distinct)
-estimate_names <- unlist(unique_estimate_names) %>%
+unlist(dims_distinct_droplist)
+
+unique_estimate_tbl %>% 
+  dplyr::bind_rows() %>%
+  dplyr::select(estimate_name) %>%
+  c() %>%
+  unlist() %>%
   as_tibble() %>%
   readr::write_csv('check-consistency-estimate-names.csv')
+```
+
+```{r test}
+
+duplicated_cols = c()
+for (data in all_tbls) {
+  n_distinct_estimates <- data %>%
+    select(estimate_name) %>%
+    n_distinct()
+  
+  for (colname in colnames(data)) {
+  
+    n_distinct_vals <- 
+      data %>% 
+      select(c(colname, estimate_name)) %>% 
+      group_by(estimate_name) %>% 
+      distinct() %>%
+      ungroup() %>%
+      dim(.) %>%
+      .[[1]]
+    
+    if (n_distinct_vals != n_distinct_estimates) {
+      duplicated_cols = c(duplicated_cols, colname)
+    }
+  }
+}
+
+duplicated_cols <- unique(duplicated_cols)
+
+examine_listcols <- 
+  unique_estimate_tbl %>%
+  bind_rows(.id = "run_id") %>%
+  select(run_id, estimate_name, all_of(duplicated_cols))
+
+set_lists_to_chars <- function(x) {
+    if(class(x) == 'list') {
+      y <- paste(unlist(x), sep='', collapse=', ')
+    } else {
+      y <- x 
+    }
+    return(y)
+}
+
+
+list_to_text <- function(column, sep = ", ") {
+  loadNamespace("stringr")
+  ret <- sapply(column, function(x) {
+    ret <- stringr::str_c(stringr::str_replace_na(x), collapse = sep)
+    if(identical(ret, character(0))){
+      NA
+    } else {
+      ret
+    }
+  })
+  as.character(ret)
+}
+
+examine_listcols %>%
+  mutate_if(is.list, list_to_text) %>%
+  readr:: write_csv('listcol_example_issues.csv')
+
 ```
 
 Check consistency of outputs directly from the endpoint

@@ -175,7 +175,7 @@ pre code {
 <pre class="r"><code>library(&quot;devtools&quot;)</code></pre>
 <pre><code>## Loading required package: usethis</code></pre>
 <pre class="r"><code>devtools::install_github(&quot;serotracker/serosurvr&quot;)</code></pre>
-<pre><code>## Skipping install of &#39;serosurvr&#39; from a github remote, the SHA1 (26f9e43b) has not changed since last install.
+<pre><code>## Skipping install of &#39;serosurvr&#39; from a github remote, the SHA1 (504e087e) has not changed since last install.
 ##   Use `force = TRUE` to force installation</code></pre>
 <pre class="r"><code>library(&quot;serosurvr&quot;)  
 library(&quot;dplyr&quot;)</code></pre>
@@ -192,6 +192,10 @@ library(&quot;dplyr&quot;)</code></pre>
 dims &lt;- vector(&quot;list&quot;, n)
 unique_estimates &lt;- vector(&quot;list&quot;, n)
 dims_distinct &lt;- vector(&quot;list&quot;, n)
+dims_distinct_droplist &lt;- vector(&quot;list&quot;, n)
+unique_estimate_tbl &lt;- vector(&quot;list&quot;, n)
+all_tbls &lt;- vector(&quot;list&quot;, n)
+
 for (i in 1:n) {
   ca_req &lt;- datareq_params(
   reqname = &quot;CA_est&quot;,
@@ -205,14 +209,96 @@ for (i in 1:n) {
   dims[[i]] &lt;- dim(ca_tbl_raw)[[1]]
   unique_estimates[[i]] &lt;- dplyr::n_distinct(ca_tbl_raw$estimate_name)
   dims_distinct[[i]] &lt;- dim(dplyr::distinct(ca_tbl_raw))[[1]]
-}
-
-unlist(dims)</code></pre>
-<pre><code>##  [1] 378 371 370 369 377 375 367 366 371 366</code></pre>
+  
+  dims_distinct_droplist[[i]] &lt;- ca_tbl_raw %&gt;%
+    select(!c(state, pin_latitude, pin_longitude, 
+              antibody_target, test_manufacturer)) %&gt;%
+    distinct() %&gt;%
+    dim(.) %&gt;% 
+    .[[1]]
+  
+  unique_estimate_tbl[[i]] &lt;- ca_tbl_raw %&gt;%
+    distinct() %&gt;%
+    group_by(estimate_name) %&gt;% 
+    filter(n() &gt; 1) %&gt;% 
+    ungroup() 
+  
+  all_tbls[[i]] &lt;- ca_tbl_raw
+}</code></pre>
+<pre class="r"><code>unlist(dims)</code></pre>
+<pre><code>##  [1] 371 372 364 370 376 372 368 371 372 367</code></pre>
 <pre class="r"><code>unlist(unique_estimates)</code></pre>
 <pre><code>##  [1] 353 353 353 353 353 353 353 353 353 353</code></pre>
 <pre class="r"><code>unlist(dims_distinct)</code></pre>
-<pre><code>##  [1] 378 371 370 369 377 375 367 366 371 366</code></pre>
+<pre><code>##  [1] 371 372 364 370 376 372 368 371 372 367</code></pre>
+<pre class="r"><code>unlist(dims_distinct_droplist)</code></pre>
+<pre><code>##  [1] 353 353 353 353 353 353 353 353 353 353</code></pre>
+<pre class="r"><code>unique_estimate_tbl %&gt;% 
+  dplyr::bind_rows() %&gt;%
+  dplyr::select(estimate_name) %&gt;%
+  c() %&gt;%
+  unlist() %&gt;%
+  as_tibble() %&gt;%
+  readr::write_csv(&#39;check-consistency-estimate-names.csv&#39;)</code></pre>
+<pre class="r"><code>duplicated_cols = c()
+for (data in all_tbls) {
+  n_distinct_estimates &lt;- data %&gt;%
+    select(estimate_name) %&gt;%
+    n_distinct()
+  
+  for (colname in colnames(data)) {
+  
+    n_distinct_vals &lt;- 
+      data %&gt;% 
+      select(c(colname, estimate_name)) %&gt;% 
+      group_by(estimate_name) %&gt;% 
+      distinct() %&gt;%
+      ungroup() %&gt;%
+      dim(.) %&gt;%
+      .[[1]]
+    
+    if (n_distinct_vals != n_distinct_estimates) {
+      duplicated_cols = c(duplicated_cols, colname)
+    }
+  }
+}</code></pre>
+<pre><code>## Note: Using an external vector in selections is ambiguous.
+## ℹ Use `all_of(colname)` instead of `colname` to silence this message.
+## ℹ See &lt;https://tidyselect.r-lib.org/reference/faq-external-vector.html&gt;.
+## This message is displayed once per session.</code></pre>
+<pre class="r"><code>duplicated_cols &lt;- unique(duplicated_cols)
+
+examine_listcols &lt;- 
+  unique_estimate_tbl %&gt;%
+  bind_rows(.id = &quot;run_id&quot;) %&gt;%
+  select(run_id, estimate_name, all_of(duplicated_cols))
+
+set_lists_to_chars &lt;- function(x) {
+    if(class(x) == &#39;list&#39;) {
+      y &lt;- paste(unlist(x), sep=&#39;&#39;, collapse=&#39;, &#39;)
+    } else {
+      y &lt;- x 
+    }
+    return(y)
+}
+
+
+list_to_text &lt;- function(column, sep = &quot;, &quot;) {
+  loadNamespace(&quot;stringr&quot;)
+  ret &lt;- sapply(column, function(x) {
+    ret &lt;- stringr::str_c(stringr::str_replace_na(x), collapse = sep)
+    if(identical(ret, character(0))){
+      NA
+    } else {
+      ret
+    }
+  })
+  as.character(ret)
+}
+
+examine_listcols %&gt;%
+  mutate_if(is.list, list_to_text) %&gt;%
+  readr:: write_csv(&#39;listcol_example_issues.csv&#39;)</code></pre>
 <p>Check consistency of outputs directly from the endpoint</p>
 <pre class="r"><code>url &lt;- Sys.getenv(&quot;RECORDS_URL&quot;)
 
@@ -242,11 +328,11 @@ for (i in 1:n) {
 }
 
 unlist(dims)</code></pre>
-<pre><code>##  [1] 365 374 364 379 371 371 376 374 367 377</code></pre>
+<pre><code>##  [1] 368 366 364 372 376 373 367 382 379 363</code></pre>
 <pre class="r"><code>unlist(unique_estimates)</code></pre>
 <pre><code>##  [1] 353 353 353 353 353 353 353 353 353 353</code></pre>
 <pre class="r"><code>unlist(dims_distinct)</code></pre>
-<pre><code>##  [1] 365 374 364 379 371 371 376 374 367 377</code></pre>
+<pre><code>##  [1] 368 366 364 372 376 373 367 382 379 363</code></pre>
 
 
 

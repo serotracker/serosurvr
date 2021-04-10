@@ -1,0 +1,416 @@
+run_id,estimate_name,antibody_target,pin_latitude,pin_longitude,state,test_manufacturer
+1,210112_Canada_CBS_BloodDonors_Sex_Male_UnAdj,Nucleocapsid (N-protein),49.57327083565,-61.644473207378354," Newfoundland and Labrador,  Prince Edward Island",Abbott
+1,210112_Canada_CBS_BloodDonors_Sex_Male_UnAdj,Nucleocapsid (N-protein),51.2087799023,-94.00832958233738," Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+1,210125_Canada_UniversityofToronto_Phase1_Females_sp,Spike,53.159794677045454,-92.87821832004371," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan,  Alberta,  Quebec,  Yukon,  British Columbia","Network Biology Collaborative
+Centre at Sinai Health"
+1,210125_Canada_UniversityofToronto_Phase1_Females_sp,Spike,49.65999787551703,-83.87199659281178,Ontario,"Network Biology Collaborative
+Centre at Sinai Health"
+1,210208_Canada_CBS_BloodDonors_Ethnicity_Asian_PopAdjTestAdj,Nucleocapsid (N-protein),47.87250656915642,-61.83624302081468," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia",Abbott
+1,210208_Canada_CBS_BloodDonors_Ethnicity_Asian_PopAdjTestAdj,Nucleocapsid (N-protein),52.210660100683334,-99.16921991439452," New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+1,210205_Ontario_PublicHealthOntario_June_ortho,Spike,49.68251769070231,-84.57050823059818,Ontario,Abbott and Ortho clinical diagnostics
+1,210205_Ontario_PublicHealthOntario_June_ortho,Nucleocapsid (N-protein),49.62257834044801,-84.52795309774346,Ontario,Abbott and Ortho clinical diagnostics
+1,201218_Canada_CBS_BloodDonors_Ethnicity_White_PopAdjTestAdj,Nucleocapsid (N-protein),52.94086113500079,-60.11090189367346, Newfoundland and Labrador,Abbott
+1,201218_Canada_CBS_BloodDonors_Ethnicity_White_PopAdjTestAdj,Nucleocapsid (N-protein),50.607768475437496,-90.16348255945016," Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+1,210125_Canada_UniversityofToronto_Phase1_18to39yo_sn,Spike,50.9338828115,-74.24991651277594," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories","Network Biology Collaborative
+Centre at Sinai Health"
+1,210125_Canada_UniversityofToronto_Phase1_18to39yo_sn,Spike,54.21998443544286,-104.9521143224215," Manitoba,  Saskatchewan,  Alberta,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+1,210125_Canada_UniversityofToronto_Phase1_Males_sn,Spike,51.88325690408889,-84.7264651989221," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan,  Alberta,  Quebec","Network Biology Collaborative
+Centre at Sinai Health"
+1,210125_Canada_UniversityofToronto_Phase1_Males_sn,Spike,55.7533309896,-114.4587320101771," Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+1,210125_Canada_UniversityofToronto_Phase1_PopAdj_sn,Spike,52.95865261664,-89.66376049745459," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan,  Alberta,  Quebec,  Yukon","Network Biology Collaborative
+Centre at Sinai Health"
+1,210125_Canada_UniversityofToronto_Phase1_PopAdj_sn,Spike,52.3113894696,-104.63838892314214," British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+1,201218_Canada_CBS_BloodDonors_Age_25-39_PopAdjTestAdj,Nucleocapsid (N-protein),48.980851504633335,-72.5722765209289," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba",Abbott
+1,201218_Canada_CBS_BloodDonors_Age_25-39_PopAdjTestAdj,Nucleocapsid (N-protein),54.574297319866666,-115.30453145518166," Saskatchewan,  Alberta, British Columbia",Abbott
+1,210125_Canada_UniversityofToronto_Phase1_18to39yo_sp,Spike,51.65269349568423,-84.50337369963653," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan,  Alberta,  Quebec","Network Biology Collaborative
+Centre at Sinai Health"
+1,210125_Canada_UniversityofToronto_Phase1_18to39yo_sp,Spike,56.22485366242963,-114.68087069121347," Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+1,201218_Canada_CBS_BloodDonors_Sex_Male_PopAdjTestAdj,Nucleocapsid (N-protein),48.68756182149029,-72.07648885581723," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba",Abbott
+1,201218_Canada_CBS_BloodDonors_Sex_Male_PopAdjTestAdj,Nucleocapsid (N-protein),54.57070834317969,-115.30405491257577," Saskatchewan,  Alberta, British Columbia",Abbott
+1,210125_Canada_UniversityofToronto_Phase1_Males_sp,Spike,48.10793603705951,-62.08450557371416," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador","Network Biology Collaborative
+Centre at Sinai Health"
+1,210125_Canada_UniversityofToronto_Phase1_Males_sp,Spike,54.42947385803333,-102.17582764623099," New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan,  Alberta,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+1,210112_Canada_CBS_BloodDonors_Sex_Female_PopAdjTestAdj,Nucleocapsid (N-protein),48.68915227449035,-72.76295251948524," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba",Abbott
+1,210112_Canada_CBS_BloodDonors_Sex_Female_PopAdjTestAdj,Nucleocapsid (N-protein),54.593192493187,-115.23103301935105," Saskatchewan,  Alberta, British Columbia",Abbott
+1,200819_Canada_CBS_BloodDonors_Overall_Adjusted,Nucleocapsid (N-protein),47.743264742525,-63.17733302131818," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick",Abbott
+1,200819_Canada_CBS_BloodDonors_Overall_Adjusted,Nucleocapsid (N-protein),53.32698840346,-105.72758428116914," Manitoba,  Saskatchewan,  Alberta,  British Columbia, Ontario",Abbott
+1,200715_GreaterVancouverArea_BC-Centre-For-Disease-Control_MarchSnapshot_OverallUnadj,Spike,54.700143444466164,-125.37892962061608,British Columbia,Abbott
+1,200715_GreaterVancouverArea_BC-Centre-For-Disease-Control_MarchSnapshot_OverallUnadj,"Nucleocapsid (N-protein), Spike",55.196362765342954,-125.4914836728376,British Columbia," Ortho-Clinical Diagnostics, Abbott"
+1,200819_Canada_CBS_BloodDonors_Female,Nucleocapsid (N-protein),53.21398110872117,-105.88341689311012," Manitoba,  Saskatchewan,  Alberta,  British Columbia, Ontario",Abbott
+1,200819_Canada_CBS_BloodDonors_Female,Nucleocapsid (N-protein),47.49092178038167,-62.89689234834871," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick",Abbott
+1,200819_Canada_CBS_BloodDonors_Female_Adjusted,Nucleocapsid (N-protein),48.56087491031929,-62.0701211657225," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia",Abbott
+1,210112_Canada_CBS_BloodDonors_Ethnicity_White_UnAdj,Nucleocapsid (N-protein),53.270645453003546,-105.40394188891534," Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+1,200819_Canada_CBS_BloodDonors_Female_Adjusted,Nucleocapsid (N-protein),51.987058677184876,-99.550020623463," New Brunswick,  Manitoba,  Saskatchewan,  Alberta,  British Columbia, Ontario",Abbott
+1,210112_Canada_CBS_BloodDonors_Ethnicity_White_UnAdj,Nucleocapsid (N-protein),47.78850430427292,-63.116702882032584," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick",Abbott
+2,201106_BC_BCChildrensHospital_Overall_Adj,Nucleocapsid (N-protein),48.767777984191724,-122.85249241052804,British Columbia," Meso Scale Diagnostics, Ortho-Clinical Diagnostics"
+2,201106_BC_BCChildrensHospital_Overall_Adj,Spike,49.29419966547498,-123.09984062645538,British Columbia," Meso Scale Diagnostics, Ortho-Clinical Diagnostics"
+2,210208_Canada_CBS_BloodDonors_Ethnicity_Indigenous_UnAdj,Nucleocapsid (N-protein),52.7458531839,-60.0393930155171, Newfoundland and Labrador,Abbott
+2,210208_Canada_CBS_BloodDonors_Ethnicity_Indigenous_UnAdj,Nucleocapsid (N-protein),46.4006884874,-63.2495533992396, Prince Edward Island,Abbott
+2,210125_Canada_UniversityofToronto_Phase1_Overall_Popdj_sp,Spike,52.08519714195,-86.32634076543013," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan,  Alberta","Network Biology Collaborative
+Centre at Sinai Health"
+2,210208_Canada_CBS_BloodDonors_Ethnicity_Indigenous_UnAdj,Nucleocapsid (N-protein),51.2087799023,-94.00832958233738," Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+2,210125_Canada_UniversityofToronto_Phase1_Overall_Popdj_sp,Spike,54.3819319925,-103.82591417434728," Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+2,210208_Canada_CBS_BloodDonors_BritishColumbia_UnAdj,Nucleocapsid (N-protein),52.85046579388705,-60.07976663148598, Newfoundland and Labrador,Abbott
+2,210208_Canada_CBS_BloodDonors_BritishColumbia_UnAdj,Nucleocapsid (N-protein),50.607768475437496,-90.16348255945016," Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+2,201017_Vancouver_UniversityofBritishColumbia_LTCF_staff,"Nucleocapsid (N-protein), Spike",48.91133144774197,-122.97001587935017,British Columbia," Siemens ,  Abbott,  Ortho Vitros , DiaSorin"
+2,201017_Vancouver_UniversityofBritishColumbia_LTCF_staff,Spike,49.111713842410815,-122.99079271960197,British Columbia,DiaSorin
+2,200819_Canada_CBS_BloodDonors_17-24,Nucleocapsid (N-protein),47.743264742525,-63.17733302131818," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick",Abbott
+2,200819_Canada_CBS_BloodDonors_17-24,Nucleocapsid (N-protein),53.32698840346,-105.72758428116914," Manitoba,  Saskatchewan,  Alberta,  British Columbia, Ontario",Abbott
+2,200819_Canada_CBS_BloodDonors_Female_Adjusted,Nucleocapsid (N-protein),49.72375838485,-76.21888330030369," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Manitoba,  Saskatchewan",Abbott
+2,200819_Canada_CBS_BloodDonors_Female_Adjusted,Nucleocapsid (N-protein),53.088483559433335,-108.0113178964321," Alberta,  British Columbia, Ontario",Abbott
+2,210112_Canada_CBS_BloodDonors_Sex_Female_PopAdjTestAdj,Nucleocapsid (N-protein),50.3045982132875,-82.04055711814793," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta",Abbott
+2,210112_Canada_CBS_BloodDonors_Sex_Female_PopAdjTestAdj,Nucleocapsid (N-protein),55.317084549048595,-124.60070430112623,British Columbia,Abbott
+2,210125_Canada_UniversityofToronto_Phase1_PopAdj_sn,Spike,47.74743098429903,-63.44267219677206," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick","Network Biology Collaborative
+Centre at Sinai Health"
+2,210125_Canada_UniversityofToronto_Phase1_PopAdj_sn,Spike,55.4045307669375,-106.65063134194469," Northwest Territories,  Manitoba,  Saskatchewan,  Alberta,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+2,210208_Canada_CBS_BloodDonors_Ethnicity_White_UnAdj,Nucleocapsid (N-protein),48.08492452564,-67.3926626771244," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario",Abbott
+2,210112_Canada_CBS_BloodDonors_Age_25-39_PopAdjTestAdj,Nucleocapsid (N-protein),52.90512968501809,-60.032020337100555, Newfoundland and Labrador,Abbott
+2,210208_Canada_CBS_BloodDonors_Ethnicity_White_UnAdj,Nucleocapsid (N-protein),54.2958445898,-111.0959850263741," Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+2,210112_Canada_CBS_BloodDonors_Age_25-39_PopAdjTestAdj,Nucleocapsid (N-protein),50.2162284953198,-90.21124818013612," Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+2,201218_Canada_CBS_BloodDonors_Sex_Female_UnAdj,Nucleocapsid (N-protein),49.68487342388571,-77.36675444316734," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan",Abbott
+2,201218_Canada_CBS_BloodDonors_Sex_Female_UnAdj,Nucleocapsid (N-protein),54.9069435101,-119.8899861944735," Alberta, British Columbia",Abbott
+2,201218_Canada_CBS_BloodDonors_Age_25-39_PopAdjTestAdj,Nucleocapsid (N-protein),49.57327083565,-61.644473207378354," Newfoundland and Labrador,  Prince Edward Island",Abbott
+2,201218_Canada_CBS_BloodDonors_Age_25-39_PopAdjTestAdj,Nucleocapsid (N-protein),50.94256036424124,-93.88797778063949," Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+2,210208_Canada_CBS_BloodDonors_Age_17-24_UnAdj,Nucleocapsid (N-protein),47.26025848964414,-63.532971039377074," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick",Abbott
+2,210208_Canada_CBS_BloodDonors_Age_17-24_UnAdj,Nucleocapsid (N-protein),53.27186736222615,-105.64259247136596," Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+2,200819_Canada_CBS_BloodDonors_17-24_Adjusted,Nucleocapsid (N-protein),51.0195546661625,-87.13665902384614," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Manitoba,  Saskatchewan,  Alberta,  British Columbia",Abbott
+2,200819_Canada_CBS_BloodDonors_17-24_Adjusted,Nucleocapsid (N-protein),49.56686929518346,-84.44486346339302,Ontario,Abbott
+2,210112_Canada_CBS_BloodDonors_Ethnicity_Others_PopAdjTestAdj,Nucleocapsid (N-protein),47.69137503379,-67.53123437329867," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario",Abbott
+2,210112_Canada_CBS_BloodDonors_Ethnicity_Others_PopAdjTestAdj,Nucleocapsid (N-protein),54.093483253730746,-111.54515356315025," Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+2,201218_Canada_CBS_BloodDonors_Ethnicity_White_UnAdj,Nucleocapsid (N-protein),49.99763955185411,-77.0757684494556," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan",Abbott
+2,201218_Canada_CBS_BloodDonors_Ethnicity_White_UnAdj,Nucleocapsid (N-protein),54.611695307720005,-120.27268584057589," Alberta, British Columbia",Abbott
+2,210112_Canada_CBS_BloodDonors_Age_40-59_PopAdjTestAdj,Nucleocapsid (N-protein),49.14132123759348,-61.44310326382395," Newfoundland and Labrador,  Prince Edward Island",Abbott
+2,210112_Canada_CBS_BloodDonors_Age_40-59_PopAdjTestAdj,Nucleocapsid (N-protein),51.70598527554135,-94.14278839174733," Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+3,200819_Canada_CBS_BloodDonors_60+,Nucleocapsid (N-protein),49.57327083565,-61.644473207378354," Newfoundland and Labrador,  Prince Edward Island",Abbott
+3,200819_Canada_CBS_BloodDonors_60+,Nucleocapsid (N-protein),51.2087799023,-94.00832958233738," Nova Scotia,  New Brunswick,  Manitoba,  Saskatchewan,  Alberta,  British Columbia, Ontario",Abbott
+3,210125_Canada_UniversityofToronto_Phase2_Overall_PopAdj,Spike,45.7990935997,-63.1462704946171," Prince Edward Island,  Nova Scotia","Network Biology Collaborative
+Centre at Sinai Health"
+3,210125_Canada_UniversityofToronto_Phase2_Overall_PopAdj,Spike,54.37127926115714,-94.32295689600494," Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Prairies,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+3,210125_Canada_UniversityofToronto_Phase1_18to39yo_sn,Spike,52.08519714195,-86.32634076543013," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan,  Alberta","Network Biology Collaborative
+Centre at Sinai Health"
+3,210125_Canada_UniversityofToronto_Phase1_18to39yo_sn,Spike,54.3819319925,-103.82591417434728," Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+3,201218_Canada_CBS_BloodDonors_Ethnicity_Asian_UnAdj,Nucleocapsid (N-protein),48.980851504633335,-72.5722765209289," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba",Abbott
+3,201218_Canada_CBS_BloodDonors_Ethnicity_Asian_UnAdj,Nucleocapsid (N-protein),54.574297319866666,-115.30453145518166," Saskatchewan,  Alberta, British Columbia",Abbott
+3,201106_BC_BCChildrensHospital_HCW,Nucleocapsid (N-protein),49.05908357642059,-123.22242797810175,British Columbia," Meso Scale Diagnostics, Ortho-Clinical Diagnostics"
+3,201106_BC_BCChildrensHospital_HCW,Spike,49.22834191659325,-123.50890710066514,British Columbia," Meso Scale Diagnostics, Ortho-Clinical Diagnostics"
+3,210112_Canada_CBS_BloodDonors_Ethnicity_Others_PopAdjTestAdj,Nucleocapsid (N-protein),47.743264742525,-63.17733302131818," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick",Abbott
+3,210112_Canada_CBS_BloodDonors_Ethnicity_Others_PopAdjTestAdj,Nucleocapsid (N-protein),53.32698840346,-105.72758428116914," Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+3,210112_Canada_CBS_BloodDonors_Age_17-24_UnAdj,Nucleocapsid (N-protein),47.529133353159814,-62.7594109838294," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick",Abbott
+3,210112_Canada_CBS_BloodDonors_Age_17-24_UnAdj,Nucleocapsid (N-protein),53.34252596546722,-105.735007593075," Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+3,200819_Canada_CBS_BloodDonors_Overall_Adjusted,Nucleocapsid (N-protein),52.45737515685925,-59.60011720553463, Newfoundland and Labrador,Abbott
+3,200819_Canada_CBS_BloodDonors_Overall_Adjusted,Nucleocapsid (N-protein),50.607768475437496,-90.16348255945016," Prince Edward Island,  Nova Scotia,  New Brunswick,  Manitoba,  Saskatchewan,  Alberta,  British Columbia, Ontario",Abbott
+3,201218_Canada_CBS_BloodDonors_Ethnicity_White_UnAdj,Nucleocapsid (N-protein),47.37984735729589,-63.38264592972875," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick",Abbott
+3,201218_Canada_CBS_BloodDonors_Ethnicity_White_UnAdj,Nucleocapsid (N-protein),53.55003442651675,-106.176160531487," Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+3,200715_GreaterVancouverArea_BC-Centre-for-Disease-Control_MaySnapshot_OverallPopAdj,"Nucleocapsid (N-protein), Spike",54.911071077759246,-124.68745561824514,British Columbia," Siemens Healthineers,  Ortho-Clinical Diagnostics, Abbott"
+3,200715_GreaterVancouverArea_BC-Centre-for-Disease-Control_MaySnapshot_OverallPopAdj,Spike,55.15494449586787,-125.16517028205082,British Columbia," Ortho-Clinical Diagnostics, Abbott"
+3,200715_GreaterVancouverArea_BC-Centre-for-Disease-Control_MaySnapshot_OverallUnadj,Spike,54.709106118417445,-125.15797435309068,British Columbia," Siemens Healthineers,  Ortho-Clinical Diagnostics, Abbott"
+3,200715_GreaterVancouverArea_BC-Centre-for-Disease-Control_MaySnapshot_OverallUnadj,Nucleocapsid (N-protein),54.909642128341716,-125.08103339830042,British Columbia," Siemens Healthineers,  Ortho-Clinical Diagnostics, Abbott"
+4,210205_Ontario_PublicHealthOntario_March_Apr_ortho,Spike,49.622782379877265,-83.86122901081882,Ontario,Abbott and Ortho clinical diagnostics
+4,210205_Ontario_PublicHealthOntario_March_Apr_ortho,Nucleocapsid (N-protein),49.93119223001746,-83.83875461622857,Ontario,Abbott and Ortho clinical diagnostics
+4,210125_Canada_UniversityofToronto_Phase1_18to39yo_sn,Spike,51.71984362807143,-82.26479289720416," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan","Network Biology Collaborative
+Centre at Sinai Health"
+4,210125_Canada_UniversityofToronto_Phase1_18to39yo_sn,Spike,54.43407994182,-106.01216650808023," Alberta,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+4,210208_Canada_CBS_BloodDonors_BritishColumbia_UnAdj,Nucleocapsid (N-protein),47.743264742525,-63.17733302131818," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick",Abbott
+4,210208_Canada_CBS_BloodDonors_BritishColumbia_UnAdj,Nucleocapsid (N-protein),53.32698840346,-105.72758428116914," Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+4,201218_Canada_CBS_BloodDonors_Overall_UnAdj,Nucleocapsid (N-protein),47.83603224826555,-62.07886822714602," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia",Abbott
+4,201218_Canada_CBS_BloodDonors_Overall_UnAdj,Nucleocapsid (N-protein),52.210660100683334,-99.16921991439452," New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+4,210112_Canada_CBS_BloodDonors_Sex_Male_UnAdj,Nucleocapsid (N-protein),49.68487342388571,-77.36675444316734," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan",Abbott
+4,210112_Canada_CBS_BloodDonors_Sex_Male_UnAdj,Nucleocapsid (N-protein),54.9069435101,-119.8899861944735," Alberta, British Columbia",Abbott
+4,210125_Canada_UniversityofToronto_Phase1_60to69yo_sn,Spike,53.159794677045454,-92.87821832004371," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan,  Alberta,  Quebec,  Yukon,  British Columbia","Network Biology Collaborative
+Centre at Sinai Health"
+4,210125_Canada_UniversityofToronto_Phase1_Females_sp,Spike,51.52839670116435,-82.0277158646075," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan","Network Biology Collaborative
+Centre at Sinai Health"
+4,210125_Canada_UniversityofToronto_Phase1_60to69yo_sn,Spike,49.896618351923934,-84.01332491597172,Ontario,"Network Biology Collaborative
+Centre at Sinai Health"
+4,210208_Canada_CBS_BloodDonors_Sex_Female_UnAdj,Nucleocapsid (N-protein),50.3045982132875,-82.04055711814793," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta",Abbott
+4,210125_Canada_UniversityofToronto_Phase1_Females_sp,Spike,53.97364551689844,-105.59762973359236," Alberta,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+4,210208_Canada_CBS_BloodDonors_Sex_Female_UnAdj,Nucleocapsid (N-protein),55.605913508907456,-125.08934169830377,British Columbia,Abbott
+4,210125_Canada_UniversityofToronto_Phase1_Ethnicity_Others,Spike,51.35498340951666,-78.28665471730518," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba","Network Biology Collaborative
+Centre at Sinai Health"
+4,210125_Canada_UniversityofToronto_Phase1_Ethnicity_Others,Spike,54.34656744141667,-106.03240908616652," Saskatchewan,  Alberta,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+4,210208_Canada_CBS_BloodDonors_Ethnicity_Asian_PopAdjTestAdj,Nucleocapsid (N-protein),48.33825658650392,-62.402949086765474," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia",Abbott
+4,210208_Canada_CBS_BloodDonors_Ethnicity_Asian_PopAdjTestAdj,Nucleocapsid (N-protein),52.22036043331917,-98.91088394305955," New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+4,210125_Canada_UniversityofToronto_Phase1_Males_sp,Spike,46.4006884874,-63.2495533992396, Prince Edward Island,"Network Biology Collaborative
+Centre at Sinai Health"
+4,210125_Canada_UniversityofToronto_Phase1_Males_sp,Spike,52.60636948485,-85.43399948019825," Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan","Network Biology Collaborative
+Centre at Sinai Health"
+4,210125_Canada_UniversityofToronto_Phase1_Males_sp,Spike,54.490518805607344,-106.4901254604804," Alberta,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+4,210112_Canada_CBS_BloodDonors_Age_17-24_UnAdj,Nucleocapsid (N-protein),48.01793278766999,-61.81790330961533," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia",Abbott
+4,210112_Canada_CBS_BloodDonors_Age_17-24_UnAdj,Nucleocapsid (N-protein),52.31415001811825,-99.53598137085275," New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+4,210208_Canada_CBS_BloodDonors_Age_17-24_PopAdjTestAdj,Nucleocapsid (N-protein),52.570639058113045,-60.4475438697012, Newfoundland and Labrador,Abbott
+4,210208_Canada_CBS_BloodDonors_Age_17-24_PopAdjTestAdj,Nucleocapsid (N-protein),50.607768475437496,-90.16348255945016," Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+4,201218_Canada_CBS_BloodDonors_Ethnicity_Others_PopAdjTestAdj,Nucleocapsid (N-protein),53.133032583350634,-60.03002060680189, Newfoundland and Labrador,Abbott
+4,201218_Canada_CBS_BloodDonors_Ethnicity_Others_PopAdjTestAdj,Nucleocapsid (N-protein),50.277430989627,-90.44278295199622," Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+4,200715_GreaterVancouverArea_BC-Centre-For-Disease-Control_MarchSnapshot_OverallUnadj,"Nucleocapsid (N-protein), Spike",54.72707687395004,-124.79080751275359,British Columbia," Ortho-Clinical Diagnostics, Abbott"
+4,200715_GreaterVancouverArea_BC-Centre-For-Disease-Control_MarchSnapshot_OverallUnadj,Spike,55.08816164969067,-125.04803831184199,British Columbia,Abbott
+4,201218_Canada_CBS_BloodDonors_Age_17-24_UnAdj,Nucleocapsid (N-protein),48.980851504633335,-72.5722765209289," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba",Abbott
+4,201218_Canada_CBS_BloodDonors_Age_17-24_UnAdj,Nucleocapsid (N-protein),54.574297319866666,-115.30453145518166," Saskatchewan,  Alberta, British Columbia",Abbott
+5,210208_Canada_CBS_BloodDonors_Age_25-39_UnAdj,Nucleocapsid (N-protein),49.57327083565,-61.644473207378354," Newfoundland and Labrador,  Prince Edward Island",Abbott
+5,210208_Canada_CBS_BloodDonors_Age_25-39_UnAdj,Nucleocapsid (N-protein),51.2087799023,-94.00832958233738," Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+5,210112_Canada_CBS_BloodDonors_Ethnicity_Others_UnAdj,Nucleocapsid (N-protein),50.3045982132875,-82.04055711814793," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta",Abbott
+5,201218_Canada_CBS_BloodDonors_Sex_Male_UnAdj,Nucleocapsid (N-protein),48.08492452564,-67.3926626771244," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario",Abbott
+5,210112_Canada_CBS_BloodDonors_Ethnicity_Others_UnAdj,Nucleocapsid (N-protein),55.1712152811,-125.022796545935,British Columbia,Abbott
+5,201218_Canada_CBS_BloodDonors_Sex_Male_UnAdj,Nucleocapsid (N-protein),54.2958445898,-111.0959850263741," Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+5,210125_Canada_UniversityofToronto_Phase1_40to59yo_sn,Spike,48.11468012776667,-62.11064466825044," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador","Network Biology Collaborative
+Centre at Sinai Health"
+5,210125_Canada_UniversityofToronto_Phase1_40to59yo_sn,Spike,54.42947385803333,-102.17582764623099," New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan,  Alberta,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+5,210112_Canada_CBS_BloodDonors_Overall_UnAdj,Nucleocapsid (N-protein),52.49347730036286,-60.08873538866562, Newfoundland and Labrador,Abbott
+5,210112_Canada_CBS_BloodDonors_Overall_UnAdj,Nucleocapsid (N-protein),50.607768475437496,-90.16348255945016," Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+5,210208_Canada_CBS_BloodDonors_Age_60+_UnAdj,Nucleocapsid (N-protein),50.265246211347396,-81.90880595551828," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta",Abbott
+5,210208_Canada_CBS_BloodDonors_Age_60+_UnAdj,Nucleocapsid (N-protein),55.45600692600421,-125.21411285613547,British Columbia,Abbott
+5,200730_Ontario_PublicHealthOntario_June_Males_PopTestAdj,NR,49.8506480003764,-84.7127169891784,Ontario, Ortho-Clinical Diagnostics
+5,200730_Ontario_PublicHealthOntario_June_Males_PopTestAdj,NR,49.83539262496822,-83.83453428189353,Ontario,Abbott
+5,210125_Canada_UniversityofToronto_Phase1_Ethnicity_Indigenous,Spike,45.7990935997,-63.1462704946171," Prince Edward Island,  Nova Scotia","Network Biology Collaborative
+Centre at Sinai Health"
+5,210125_Canada_UniversityofToronto_Phase1_Ethnicity_Indigenous,Spike,54.26111179062,-97.96218418315961," Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan,  Alberta,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+5,210208_Canada_CBS_BloodDonors_BritishColumbia_UnAdj,Nucleocapsid (N-protein),47.743264742525,-63.17733302131818," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick",Abbott
+5,210208_Canada_CBS_BloodDonors_BritishColumbia_UnAdj,Nucleocapsid (N-protein),53.32698840346,-105.72758428116914," Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+5,210125_Canada_UniversityofToronto_Phase1_60to69yo_sn,Spike,46.4006884874,-63.2495533992396, Prince Edward Island,"Network Biology Collaborative
+Centre at Sinai Health"
+5,210125_Canada_UniversityofToronto_Phase1_60to69yo_sn,Spike,52.60636948485,-85.43399948019825," Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan","Network Biology Collaborative
+Centre at Sinai Health"
+5,210125_Canada_UniversityofToronto_Phase1_60to69yo_sn,Spike,54.43407994182,-106.01216650808023," Alberta,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+5,210208_Canada_CBS_BloodDonors_Ethnicity_Asian_PopAdjTestAdj,Nucleocapsid (N-protein),47.67876745997956,-63.186429718292764," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick",Abbott
+5,210208_Canada_CBS_BloodDonors_Ethnicity_Asian_PopAdjTestAdj,Nucleocapsid (N-protein),52.89165087026015,-105.43170362604909," Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+5,210125_Canada_UniversityofToronto_Phase1_Females_sn,Spike,46.15971215350737,-62.988033891524275, Prince Edward Island,"Network Biology Collaborative
+Centre at Sinai Health"
+5,210125_Canada_UniversityofToronto_Phase1_Females_sn,Spike,53.43714696529091,-94.78771176559914," Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan,  Alberta,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+5,210125_Canada_UniversityofToronto_Phase1_18to39yo_sn,Spike,48.545882607577276,-62.5091977860549," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador","Network Biology Collaborative
+Centre at Sinai Health"
+5,210125_Canada_UniversityofToronto_Phase1_18to39yo_sn,Spike,54.798406268327355,-102.38666245507736," New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan,  Alberta,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+5,201017_Vancouver_UniversityofBritishColumbia_LTCF_overall,"Nucleocapsid (N-protein), Spike",49.60152383719151,-123.17702774240149,British Columbia," Siemens ,  Abbott,  Ortho Vitros , DiaSorin"
+5,201017_Vancouver_UniversityofBritishColumbia_LTCF_overall,Spike,49.18723916869354,-123.3574033639777,British Columbia," Abbott,  Ortho Vitros , DiaSorin"
+5,210112_Canada_CBS_BloodDonors_Overall_PopAdjTestAdj,Nucleocapsid (N-protein),48.980851504633335,-72.5722765209289," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba",Abbott
+5,210112_Canada_CBS_BloodDonors_Overall_PopAdjTestAdj,Nucleocapsid (N-protein),54.574297319866666,-115.30453145518166," Saskatchewan,  Alberta, British Columbia",Abbott
+5,210112_Canada_CBS_BloodDonors_Ethnicity_Others_PopAdjTestAdj,Nucleocapsid (N-protein),47.744678779410464,-67.16461831846341," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario",Abbott
+5,210112_Canada_CBS_BloodDonors_Ethnicity_Others_PopAdjTestAdj,Nucleocapsid (N-protein),54.72130977141583,-111.02268538142637," Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+5,210112_Canada_CBS_BloodDonors_Age_17-24_UnAdj,Nucleocapsid (N-protein),47.761210493306194,-61.838364491746376," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia",Abbott
+5,210112_Canada_CBS_BloodDonors_Age_17-24_UnAdj,Nucleocapsid (N-protein),52.210660100683334,-99.16921991439452," New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+5,210208_Canada_CBS_BloodDonors_Sex_Male_UnAdj,Nucleocapsid (N-protein),52.97616408091717,-60.34166402693672, Newfoundland and Labrador,Abbott
+5,210208_Canada_CBS_BloodDonors_Sex_Male_UnAdj,Nucleocapsid (N-protein),50.85455675378553,-90.6440752642035," Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+5,201218_Canada_CBS_BloodDonors_Age_17-24_UnAdj,Nucleocapsid (N-protein),49.167434996391485,-72.3024506459243," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba",Abbott
+5,201218_Canada_CBS_BloodDonors_Age_17-24_UnAdj,Nucleocapsid (N-protein),54.154294195994154,-115.59212463461155," Saskatchewan,  Alberta, British Columbia",Abbott
+5,210112_Canada_CBS_BloodDonors_Age_60+_UnAdj,Nucleocapsid (N-protein),51.35252238989592,-94.4067989054396," Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+5,210112_Canada_CBS_BloodDonors_Age_60+_UnAdj,Nucleocapsid (N-protein),49.61567209693095,-61.95136036424642," Newfoundland and Labrador,  Prince Edward Island",Abbott
+5,210208_Canada_CBS_BloodDonors_Ethnicity_Asian_UnAdj,Nucleocapsid (N-protein),50.06507543968654,-61.60844266302555," Newfoundland and Labrador,  Prince Edward Island",Abbott
+5,210208_Canada_CBS_BloodDonors_Ethnicity_White_UnAdj,Nucleocapsid (N-protein),51.018257857508765,-94.24251193695045," Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+5,210208_Canada_CBS_BloodDonors_Ethnicity_Asian_UnAdj,Nucleocapsid (N-protein),51.10734942219122,-93.91826523893913," Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+5,210208_Canada_CBS_BloodDonors_Ethnicity_White_UnAdj,Nucleocapsid (N-protein),49.59225074638897,-61.151501488912515," Newfoundland and Labrador,  Prince Edward Island",Abbott
+6,210125_Canada_UniversityofToronto_Phase1_70yo&older_sn,Spike,52.95865261664,-89.66376049745459," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan,  Alberta,  Quebec,  Yukon","Network Biology Collaborative
+Centre at Sinai Health"
+6,210125_Canada_UniversityofToronto_Phase1_70yo&older_sn,Spike,52.3113894696,-104.63838892314214," British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+6,201218_Canada_CBS_BloodDonors_Sex_Male_UnAdj,Nucleocapsid (N-protein),49.57327083565,-61.644473207378354," Newfoundland and Labrador,  Prince Edward Island",Abbott
+6,201218_Canada_CBS_BloodDonors_Sex_Male_UnAdj,Nucleocapsid (N-protein),51.2087799023,-94.00832958233738," Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+6,210112_Canada_CBS_BloodDonors_Ethnicity_Asian_PopAdjTestAdj,Nucleocapsid (N-protein),48.980851504633335,-72.5722765209289," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba",Abbott
+6,210112_Canada_CBS_BloodDonors_Ethnicity_Asian_PopAdjTestAdj,Nucleocapsid (N-protein),54.574297319866666,-115.30453145518166," Saskatchewan,  Alberta, British Columbia",Abbott
+6,201017_Vancouver_UniversityofBritishColumbia_LTCF_residents,Nucleocapsid (N-protein),49.2609,-123.1139,British Columbia, Siemens 
+6,201017_Vancouver_UniversityofBritishColumbia_LTCF_residents,"Nucleocapsid (N-protein), Spike",48.86105117183575,-123.4783776673277,British Columbia," Abbott,  Ortho Vitros , DiaSorin,  Siemens "
+6,210208_Canada_CBS_BloodDonors_Age_60+_UnAdj,Nucleocapsid (N-protein),48.11468012776667,-62.11064466825044," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia",Abbott
+6,210208_Canada_CBS_BloodDonors_Age_60+_UnAdj,Nucleocapsid (N-protein),52.210660100683334,-99.16921991439452," New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+6,210208_Canada_CBS_BloodDonors_Ethnicity_Asian_PopAdjTestAdj,Nucleocapsid (N-protein),52.7458531839,-60.0393930155171, Newfoundland and Labrador,Abbott
+6,210208_Canada_CBS_BloodDonors_Ethnicity_Asian_PopAdjTestAdj,Nucleocapsid (N-protein),50.607768475437496,-90.16348255945016," Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+6,201017_Vancouver_UniversityofBritishColumbia_LTCF_staff,"Nucleocapsid (N-protein), Spike",48.82300087370493,-123.47404296906396,British Columbia," Siemens ,  Abbott,  Ortho Vitros , DiaSorin"
+6,201017_Vancouver_UniversityofBritishColumbia_LTCF_staff,Spike,49.41042737657236,-123.4000445719792,British Columbia," Abbott,  Ortho Vitros , DiaSorin"
+6,210112_Canada_CBS_BloodDonors_Age_60+_PopAdjTestAdj,Nucleocapsid (N-protein),49.5217031339315,-61.42205184257759," Newfoundland and Labrador,  Prince Edward Island",Abbott
+6,210112_Canada_CBS_BloodDonors_Age_60+_PopAdjTestAdj,Nucleocapsid (N-protein),51.102112818500736,-93.8850207499867," Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+6,201218_Canada_CBS_BloodDonors_Overall_PopTestAdj,Nucleocapsid (N-protein),48.047673113885956,-62.47206533878791," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia",Abbott
+6,201218_Canada_CBS_BloodDonors_Overall_PopTestAdj,Nucleocapsid (N-protein),51.79362359685346,-99.28185308470165," New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+6,200819_Canada_CBS_BloodDonors_60+,Nucleocapsid (N-protein),49.41261853848133,-61.69884621649091," Newfoundland and Labrador,  Prince Edward Island",Abbott
+6,200819_Canada_CBS_BloodDonors_60+,Nucleocapsid (N-protein),51.340522751258455,-94.43180769395637," Nova Scotia,  New Brunswick,  Manitoba,  Saskatchewan,  Alberta,  British Columbia, Ontario",Abbott
+6,201017_Vancouver_UniversityofBritishColumbia_LTCF_overall,Nucleocapsid (N-protein),49.50616656759746,-123.41614212058813,British Columbia, Siemens 
+6,201017_Vancouver_UniversityofBritishColumbia_LTCF_overall,"Nucleocapsid (N-protein), Spike",49.58093702651501,-122.98215812085601,British Columbia," Abbott,  Ortho Vitros , DiaSorin,  Siemens "
+6,201218_Canada_CBS_BloodDonors_Ethnicity_Asian_UnAdj,Nucleocapsid (N-protein),48.08492452564,-67.3926626771244," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario",Abbott
+6,201218_Canada_CBS_BloodDonors_Ethnicity_Asian_UnAdj,Nucleocapsid (N-protein),54.2958445898,-111.0959850263741," Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+6,210112_Canada_CBS_BloodDonors_BritishColumbia_UnAdj,Nucleocapsid (N-protein),48.4919104269786,-73.01571417145696," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba",Abbott
+6,210112_Canada_CBS_BloodDonors_BritishColumbia_UnAdj,Nucleocapsid (N-protein),54.79819977303089,-115.55549198976479," Saskatchewan,  Alberta, British Columbia",Abbott
+6,210112_Canada_CBS_BloodDonors_Age_17-24_UnAdj,Nucleocapsid (N-protein),49.37213962201917,-61.66679246627419," Newfoundland and Labrador,  Prince Edward Island",Abbott
+6,210112_Canada_CBS_BloodDonors_Age_17-24_UnAdj,Nucleocapsid (N-protein),50.88353859346759,-94.44886297345118," Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+6,210125_Canada_UniversityofToronto_Phase1_18to39yo_sp,Spike,51.71984362807143,-82.26479289720416," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan","Network Biology Collaborative
+Centre at Sinai Health"
+6,210125_Canada_UniversityofToronto_Phase1_18to39yo_sp,Spike,54.43407994182,-106.01216650808023," Alberta,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+6,210112_Canada_CBS_BloodDonors_Age_40-59_PopAdjTestAdj,Nucleocapsid (N-protein),49.51517739365598,-61.83112386306948," Newfoundland and Labrador,  Prince Edward Island",Abbott
+6,210112_Canada_CBS_BloodDonors_Age_40-59_PopAdjTestAdj,Nucleocapsid (N-protein),50.744507075673134,-94.12790131029874," Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+6,201218_Canada_CBS_BloodDonors_Ethnicity_Others_UnAdj,Nucleocapsid (N-protein),48.190689657516344,-61.83282455901295," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia",Abbott
+6,201218_Canada_CBS_BloodDonors_Ethnicity_Others_UnAdj,Nucleocapsid (N-protein),52.28063449325449,-98.97774102051864," New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+6,210112_Canada_CBS_BloodDonors_Age_25-39_PopAdjTestAdj,Nucleocapsid (N-protein),49.79559850711708,-61.446683232043895," Newfoundland and Labrador,  Prince Edward Island",Abbott
+6,210112_Canada_CBS_BloodDonors_Age_25-39_PopAdjTestAdj,Nucleocapsid (N-protein),50.79345094527021,-93.99292796249324," Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+6,210112_Canada_CBS_BloodDonors_Age_60+_UnAdj,Nucleocapsid (N-protein),53.95480001606157,-110.78753274191352," Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+6,210112_Canada_CBS_BloodDonors_Age_60+_UnAdj,Nucleocapsid (N-protein),47.731298884382944,-67.2765420074689," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario",Abbott
+7,210125_Canada_UniversityofToronto_Phase2_Overall_PopAdj,Spike,50.82285817645,-73.86284053845625," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Prairies,  Quebec","Network Biology Collaborative
+Centre at Sinai Health"
+7,210125_Canada_UniversityofToronto_Phase2_Overall_PopAdj,Spike,55.7533309896,-114.4587320101771," Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+7,210125_Canada_UniversityofToronto_Phase1_Females_sp,Spike,50.9338828115,-74.24991651277594," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories","Network Biology Collaborative
+Centre at Sinai Health"
+7,210125_Canada_UniversityofToronto_Phase1_Females_sp,Spike,54.21998443544286,-104.9521143224215," Manitoba,  Saskatchewan,  Alberta,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+7,200819_Canada_CBS_BloodDonors_40-59_Adjusted,Nucleocapsid (N-protein),47.743264742525,-63.17733302131818," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick",Abbott
+7,200819_Canada_CBS_BloodDonors_40-59_Adjusted,Nucleocapsid (N-protein),53.32698840346,-105.72758428116914," Manitoba,  Saskatchewan,  Alberta,  British Columbia, Ontario",Abbott
+7,200819_Canada_CBS_BloodDonors_60+,Nucleocapsid (N-protein),49.57327083565,-61.644473207378354," Newfoundland and Labrador,  Prince Edward Island",Abbott
+7,200819_Canada_CBS_BloodDonors_60+,Nucleocapsid (N-protein),51.2087799023,-94.00832958233738," Nova Scotia,  New Brunswick,  Manitoba,  Saskatchewan,  Alberta,  British Columbia, Ontario",Abbott
+7,210125_Canada_UniversityofToronto_Phase1_Ethnicity_Indigenous,Spike,50.89171338755212,-74.07707219325995," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories","Network Biology Collaborative
+Centre at Sinai Health"
+7,210125_Canada_UniversityofToronto_Phase1_Ethnicity_Indigenous,Spike,54.320424077384274,-105.07152607610568," Manitoba,  Saskatchewan,  Alberta,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+7,201218_Canada_CBS_BloodDonors_Ethnicity_Others_PopAdjTestAdj,Nucleocapsid (N-protein),50.01813734880002,-61.54707463690737," Newfoundland and Labrador,  Prince Edward Island",Abbott
+7,201218_Canada_CBS_BloodDonors_Ethnicity_Others_PopAdjTestAdj,Nucleocapsid (N-protein),50.54837400583333,-88.83925175507112," Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta",Abbott
+7,201218_Canada_CBS_BloodDonors_Ethnicity_Others_PopAdjTestAdj,Nucleocapsid (N-protein),55.32330586727501,-124.745874714677,British Columbia,Abbott
+7,200819_Canada_CBS_BloodDonors_17-24_Adjusted,Nucleocapsid (N-protein),52.37315525325549,-60.421778988551694, Newfoundland and Labrador,Abbott
+7,200819_Canada_CBS_BloodDonors_17-24_Adjusted,Nucleocapsid (N-protein),50.607768475437496,-90.16348255945016," Prince Edward Island,  Nova Scotia,  New Brunswick,  Manitoba,  Saskatchewan,  Alberta,  British Columbia, Ontario",Abbott
+7,210112_Canada_CBS_BloodDonors_Sex_Female_PopAdjTestAdj,Nucleocapsid (N-protein),47.65074724290525,-63.49760581896242," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick",Abbott
+7,210112_Canada_CBS_BloodDonors_Sex_Female_PopAdjTestAdj,Nucleocapsid (N-protein),53.40176008673314,-105.37191481629863," Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+7,210112_Canada_CBS_BloodDonors_Ethnicity_White_UnAdj,Nucleocapsid (N-protein),48.08492452564,-67.3926626771244," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario",Abbott
+7,210112_Canada_CBS_BloodDonors_Ethnicity_White_UnAdj,Nucleocapsid (N-protein),54.2958445898,-111.0959850263741," Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+7,201218_Canada_CBS_BloodDonors_Sex_Female_PopAdjTestAdj,Nucleocapsid (N-protein),52.889571713178356,-60.44741750716724, Newfoundland and Labrador,Abbott
+7,201218_Canada_CBS_BloodDonors_Sex_Female_PopAdjTestAdj,Nucleocapsid (N-protein),50.317421845462405,-90.14671538163594," Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+7,201218_Canada_CBS_BloodDonors_Sex_Female_UnAdj,Nucleocapsid (N-protein),48.980851504633335,-72.5722765209289," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba",Abbott
+7,201218_Canada_CBS_BloodDonors_Sex_Female_UnAdj,Nucleocapsid (N-protein),54.574297319866666,-115.30453145518166," Saskatchewan,  Alberta, British Columbia",Abbott
+7,210125_Canada_UniversityofToronto_Phase1_40to59yo_sp,Spike,52.95865261664,-89.66376049745459," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan,  Alberta,  Quebec,  Yukon","Network Biology Collaborative
+Centre at Sinai Health"
+7,210125_Canada_UniversityofToronto_Phase1_40to59yo_sp,Spike,52.3113894696,-104.63838892314214," British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+7,210112_Canada_CBS_BloodDonors_Age_40-59_PopAdjTestAdj,Nucleocapsid (N-protein),49.888336225750244,-62.032822181238735," Newfoundland and Labrador,  Prince Edward Island",Abbott
+7,210112_Canada_CBS_BloodDonors_Age_40-59_PopAdjTestAdj,Nucleocapsid (N-protein),50.995791502789864,-94.32531946367244," Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+7,201218_Canada_CBS_BloodDonors_Ethnicity_Others_UnAdj,Nucleocapsid (N-protein),49.68487342388571,-77.36675444316734," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan",Abbott
+7,201218_Canada_CBS_BloodDonors_Ethnicity_Others_UnAdj,Nucleocapsid (N-protein),54.9069435101,-119.8899861944735," Alberta, British Columbia",Abbott
+8,210208_Canada_CBS_BloodDonors_Age_25-39_UnAdj,Nucleocapsid (N-protein),48.11468012776667,-62.11064466825044," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia",Abbott
+8,210208_Canada_CBS_BloodDonors_Age_25-39_UnAdj,Nucleocapsid (N-protein),52.210660100683334,-99.16921991439452," New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+8,210205_Ontario_PublicHealthOntario_March_Apr_ortho,Spike,49.27975575864039,-84.03114715877493,Ontario,Abbott and Ortho clinical diagnostics
+8,210205_Ontario_PublicHealthOntario_March_Apr_ortho,Nucleocapsid (N-protein),49.896444853431056,-84.71783675473718,Ontario,Abbott and Ortho clinical diagnostics
+8,210112_Canada_CBS_BloodDonors_Overall_UnAdj,Nucleocapsid (N-protein),53.03711959217273,-60.35032491589084, Newfoundland and Labrador,Abbott
+8,210112_Canada_CBS_BloodDonors_Overall_UnAdj,Nucleocapsid (N-protein),50.607768475437496,-90.16348255945016," Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+8,210208_Canada_CBS_BloodDonors_Ethnicity_Others_UnAdj,Nucleocapsid (N-protein),48.08492452564,-67.3926626771244," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario",Abbott
+8,210208_Canada_CBS_BloodDonors_Ethnicity_Others_UnAdj,Nucleocapsid (N-protein),54.2958445898,-111.0959850263741," Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+8,210112_Canada_CBS_BloodDonors_Age_25-39_UnAdj,Nucleocapsid (N-protein),47.743264742525,-63.17733302131818," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick",Abbott
+8,210112_Canada_CBS_BloodDonors_Age_25-39_UnAdj,Nucleocapsid (N-protein),53.32698840346,-105.72758428116914," Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+8,200730_Ontario_PublicHealthOntario_June_DetailedAge>=80_UnAdj,NR,49.225676299630656,-84.64555301557087,Ontario, Ortho-Clinical Diagnostics
+8,200730_Ontario_PublicHealthOntario_June_DetailedAge>=80_UnAdj,NR,49.73000302511206,-83.89759689881106,Ontario,Abbott
+8,210125_Canada_UniversityofToronto_Phase1_Females_sn,Spike,53.159794677045454,-92.87821832004371," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan,  Alberta,  Quebec,  Yukon,  British Columbia","Network Biology Collaborative
+Centre at Sinai Health"
+8,210125_Canada_UniversityofToronto_Phase1_Females_sn,Spike,49.685678004231676,-83.98042949926482,Ontario,"Network Biology Collaborative
+Centre at Sinai Health"
+8,200819_Canada_CBS_BloodDonors_17-24,Nucleocapsid (N-protein),47.7797008858911,-61.819753732307525," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia",Abbott
+8,200819_Canada_CBS_BloodDonors_17-24,Nucleocapsid (N-protein),51.72809356462707,-99.3268652109518," New Brunswick,  Manitoba,  Saskatchewan,  Alberta,  British Columbia, Ontario",Abbott
+8,210125_Canada_UniversityofToronto_Phase1_18to39yo_sn,Spike,51.88325690408889,-84.7264651989221," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan,  Alberta,  Quebec","Network Biology Collaborative
+Centre at Sinai Health"
+8,210125_Canada_UniversityofToronto_Phase1_18to39yo_sn,Spike,55.7533309896,-114.4587320101771," Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+8,200819_Canada_CBS_BloodDonors_60+_Adjusted,Nucleocapsid (N-protein),48.88670907394,-70.23593556504483," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Manitoba",Abbott
+8,200819_Canada_CBS_BloodDonors_60+_Adjusted,Nucleocapsid (N-protein),53.293613904425,-107.54189391647357," Saskatchewan,  Alberta,  British Columbia, Ontario",Abbott
+8,210208_Canada_CBS_BloodDonors_Age_40-59_UnAdj,Nucleocapsid (N-protein),49.57327083565,-61.644473207378354," Newfoundland and Labrador,  Prince Edward Island",Abbott
+8,210208_Canada_CBS_BloodDonors_Age_40-59_UnAdj,Nucleocapsid (N-protein),51.2087799023,-94.00832958233738," Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+8,210112_Canada_CBS_BloodDonors_Age_17-24_UnAdj,Nucleocapsid (N-protein),47.449562041459345,-62.74517237939472," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick",Abbott
+8,210112_Canada_CBS_BloodDonors_Age_17-24_UnAdj,Nucleocapsid (N-protein),53.537554423288164,-105.80586990157656," Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+8,210112_Canada_CBS_BloodDonors_Age_40-59_PopAdjTestAdj,Nucleocapsid (N-protein),47.9976891192234,-62.39280175382205," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia",Abbott
+8,210112_Canada_CBS_BloodDonors_Age_40-59_PopAdjTestAdj,Nucleocapsid (N-protein),52.664199039709466,-98.67350249858605," New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+8,210112_Canada_CBS_BloodDonors_Age_17-24_PopAdjTestAdj,Nucleocapsid (N-protein),48.980851504633335,-72.5722765209289," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba",Abbott
+8,210112_Canada_CBS_BloodDonors_Age_17-24_PopAdjTestAdj,Nucleocapsid (N-protein),54.574297319866666,-115.30453145518166," Saskatchewan,  Alberta, British Columbia",Abbott
+8,200819_Canada_CBS_BloodDonors_Overall,Nucleocapsid (N-protein),48.57507955483833,-69.94638566005108," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Manitoba",Abbott
+8,200819_Canada_CBS_BloodDonors_Overall,Nucleocapsid (N-protein),53.62313517577789,-107.96558777858445," Saskatchewan,  Alberta,  British Columbia, Ontario",Abbott
+8,210125_Canada_UniversityofToronto_Phase1_18to39yo_sp,Spike,48.041164579186166,-62.52375277742543," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador","Network Biology Collaborative
+Centre at Sinai Health"
+8,210125_Canada_UniversityofToronto_Phase1_18to39yo_sp,Spike,54.42947385803333,-102.17582764623099," New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan,  Alberta,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+8,200730_Ontario_PublicHealthOntario_May_Males_UnAdj,NR,49.92772915463097,-84.27801442445667,Ontario, Ortho-Clinical Diagnostics
+8,200730_Ontario_PublicHealthOntario_May_Males_UnAdj,NR,49.05075041876639,-84.23305172076357,Ontario,Abbott
+8,210208_Canada_CBS_BloodDonors_Ethnicity_White_UnAdj,Nucleocapsid (N-protein),49.12521065416738,-72.63350708750313," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba",Abbott
+8,210208_Canada_CBS_BloodDonors_Ethnicity_White_UnAdj,Nucleocapsid (N-protein),54.694839877005855,-115.32387595579924," Saskatchewan,  Alberta, British Columbia",Abbott
+9,201218_Canada_CBS_BloodDonors_Overall_UnAdj,Nucleocapsid (N-protein),47.743264742525,-63.17733302131818," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick",Abbott
+9,201218_Canada_CBS_BloodDonors_Overall_UnAdj,Nucleocapsid (N-protein),51.45602502885,-91.36216352015035," Ontario,  Manitoba",Abbott
+9,201218_Canada_CBS_BloodDonors_Overall_UnAdj,Nucleocapsid (N-protein),54.574297319866666,-115.30453145518166," Saskatchewan,  Alberta, British Columbia",Abbott
+9,210125_Canada_UniversityofToronto_Phase1_60to69yo_sn,Spike,51.35498340951666,-78.28665471730518," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba","Network Biology Collaborative
+Centre at Sinai Health"
+9,210125_Canada_UniversityofToronto_Phase1_60to69yo_sn,Spike,54.34656744141667,-106.03240908616652," Saskatchewan,  Alberta,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+9,201218_Canada_CBS_BloodDonors_Overall_PopTestAdj,Nucleocapsid (N-protein),48.11468012776667,-62.11064466825044," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia",Abbott
+9,201218_Canada_CBS_BloodDonors_Overall_PopTestAdj,Nucleocapsid (N-protein),52.210660100683334,-99.16921991439452," New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+9,210112_Canada_CBS_BloodDonors_Ethnicity_Asian_PopAdjTestAdj,Nucleocapsid (N-protein),49.68487342388571,-77.36675444316734," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan",Abbott
+9,210112_Canada_CBS_BloodDonors_Ethnicity_Asian_PopAdjTestAdj,Nucleocapsid (N-protein),54.9069435101,-119.8899861944735," Alberta, British Columbia",Abbott
+9,210112_Canada_CBS_BloodDonors_Age_40-59_UnAdj,Nucleocapsid (N-protein),50.3045982132875,-82.04055711814793," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta",Abbott
+9,210112_Canada_CBS_BloodDonors_Age_40-59_UnAdj,Nucleocapsid (N-protein),55.160698366502956,-124.95346971461383,British Columbia,Abbott
+9,210208_Canada_CBS_BloodDonors_Ethnicity_Asian_PopAdjTestAdj,Nucleocapsid (N-protein),47.558836029162194,-63.39762870711078," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick",Abbott
+9,210208_Canada_CBS_BloodDonors_Ethnicity_Asian_PopAdjTestAdj,Nucleocapsid (N-protein),53.32698840346,-105.72758428116914," Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+9,201218_Canada_CBS_BloodDonors_Ethnicity_White_PopAdjTestAdj,Nucleocapsid (N-protein),49.54810904438779,-77.588917572145," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan",Abbott
+9,201218_Canada_CBS_BloodDonors_Ethnicity_White_PopAdjTestAdj,Nucleocapsid (N-protein),54.76143105699434,-119.8763308555889," Alberta, British Columbia",Abbott
+9,210125_Canada_UniversityofToronto_Phase1_18to39yo_sn,Spike,51.88325690408889,-84.7264651989221," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan,  Alberta,  Quebec","Network Biology Collaborative
+Centre at Sinai Health"
+9,210125_Canada_UniversityofToronto_Phase1_18to39yo_sn,Spike,55.7533309896,-114.4587320101771," Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+9,210112_Canada_CBS_BloodDonors_Age_60+_PopAdjTestAdj,Nucleocapsid (N-protein),47.652244368611946,-62.40943088068037," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia",Abbott
+9,210112_Canada_CBS_BloodDonors_Age_60+_PopAdjTestAdj,Nucleocapsid (N-protein),52.364651758917475,-99.45726047127259," New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+9,200819_Canada_CBS_BloodDonors_17-24_Adjusted,Nucleocapsid (N-protein),48.53048286988885,-61.97290392418916," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia",Abbott
+9,200819_Canada_CBS_BloodDonors_17-24_Adjusted,Nucleocapsid (N-protein),51.74171170369559,-99.02534801802541," New Brunswick,  Manitoba,  Saskatchewan,  Alberta,  British Columbia, Ontario",Abbott
+9,210208_Canada_CBS_BloodDonors_Age_40-59_UnAdj,Nucleocapsid (N-protein),48.08492452564,-67.3926626771244," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario",Abbott
+9,210208_Canada_CBS_BloodDonors_Age_40-59_UnAdj,Nucleocapsid (N-protein),54.2958445898,-111.0959850263741," Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+9,210125_Canada_UniversityofToronto_Phase1_PopAdj_sn,Spike,51.71984362807143,-82.26479289720416," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan","Network Biology Collaborative
+Centre at Sinai Health"
+9,210125_Canada_UniversityofToronto_Phase1_PopAdj_sn,Spike,54.43407994182,-106.01216650808023," Alberta,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+9,200715_GreaterVancouverArea_BC-Centre-for-Disease-Control_MaySnapshot_OverallUnadj,Nucleocapsid (N-protein),54.91363789033862,-124.52310395367967,British Columbia," Siemens Healthineers,  Ortho-Clinical Diagnostics, Abbott"
+9,200715_GreaterVancouverArea_BC-Centre-for-Disease-Control_MaySnapshot_OverallUnadj,Spike,55.19681348004247,-124.60760932112403,British Columbia," Siemens Healthineers,  Ortho-Clinical Diagnostics, Abbott"
+9,201218_Canada_CBS_BloodDonors_Ethnicity_Others_PopAdjTestAdj,Nucleocapsid (N-protein),49.57327083565,-61.644473207378354," Newfoundland and Labrador,  Prince Edward Island",Abbott
+9,201218_Canada_CBS_BloodDonors_Ethnicity_Others_PopAdjTestAdj,Nucleocapsid (N-protein),51.2087799023,-94.00832958233738," Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+9,200730_Ontario_PublicHealthOntario_May_Age20-59yr_UnAdj,NR,49.772839283365855,-84.02391963736764,Ontario, Ortho-Clinical Diagnostics
+9,200730_Ontario_PublicHealthOntario_May_Age20-59yr_UnAdj,NR,49.484708027905825,-84.42913962782484,Ontario,Abbott
+9,210208_Canada_CBS_BloodDonors_Age_25-39_PopAdjTestAdj,Nucleocapsid (N-protein),49.72514098828907,-77.76138990987427," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan",Abbott
+9,210208_Canada_CBS_BloodDonors_Age_25-39_PopAdjTestAdj,Nucleocapsid (N-protein),55.2245996119354,-120.33345013085055," Alberta, British Columbia",Abbott
+9,210112_Canada_CBS_BloodDonors_Age_25-39_PopAdjTestAdj,Nucleocapsid (N-protein),49.6680373837412,-77.54114779680484," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan",Abbott
+9,210112_Canada_CBS_BloodDonors_Age_25-39_PopAdjTestAdj,Nucleocapsid (N-protein),54.468398338973834,-120.00469769301024," Alberta, British Columbia",Abbott
+9,210125_Canada_UniversityofToronto_Phase1_18to39yo_sp,Spike,47.66239742644687,-61.73209637454197," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador","Network Biology Collaborative
+Centre at Sinai Health"
+9,210125_Canada_UniversityofToronto_Phase1_18to39yo_sp,Spike,54.42947385803333,-102.17582764623099," New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan,  Alberta,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+10,210208_Canada_CBS_BloodDonors_Age_25-39_UnAdj,Nucleocapsid (N-protein),49.57327083565,-61.644473207378354," Newfoundland and Labrador,  Prince Edward Island",Abbott
+10,210208_Canada_CBS_BloodDonors_Age_25-39_UnAdj,Nucleocapsid (N-protein),51.2087799023,-94.00832958233738," Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+10,201218_Canada_CBS_BloodDonors_Age_17-24_PopAdjTestAdj,Nucleocapsid (N-protein),49.68487342388571,-77.36675444316734," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan",Abbott
+10,201218_Canada_CBS_BloodDonors_Age_17-24_PopAdjTestAdj,Nucleocapsid (N-protein),54.9069435101,-119.8899861944735," Alberta, British Columbia",Abbott
+10,201106_BC_BCChildrensHospital_Overall_Adj,Nucleocapsid (N-protein),49.34697933268523,-123.23154972564478,British Columbia," Meso Scale Diagnostics, Ortho-Clinical Diagnostics"
+10,200730_Ontario_PublicHealthOntario_June_GenPop_UnAdj,NR,49.652460014039086,-84.63171268770598,Ontario, Ortho-Clinical Diagnostics
+10,201106_BC_BCChildrensHospital_Overall_Adj,Spike,48.92282982036019,-123.47893469520542,British Columbia," Meso Scale Diagnostics, Ortho-Clinical Diagnostics"
+10,200730_Ontario_PublicHealthOntario_June_GenPop_UnAdj,NR,49.54299076064751,-84.556796864226,Ontario,Abbott
+10,200715_GreaterVancouverArea_BC-Centre-For-Disease-Control_MarchSnapshot_OverallPopAdj,"Nucleocapsid (N-protein), Spike",55.53127611333585,-124.92207549115722,British Columbia," Ortho-Clinical Diagnostics, Abbott"
+10,200715_GreaterVancouverArea_BC-Centre-For-Disease-Control_MarchSnapshot_OverallPopAdj,Spike,54.85836142948654,-125.39987283858984,British Columbia,Abbott
+10,210125_Canada_UniversityofToronto_Phase1_Ethnicity_English/European,Spike,51.71984362807143,-82.26479289720416," Prince Edward Island,  Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan","Network Biology Collaborative
+Centre at Sinai Health"
+10,210125_Canada_UniversityofToronto_Phase1_Ethnicity_English/European,Spike,54.43407994182,-106.01216650808023," Alberta,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+10,210112_Canada_CBS_BloodDonors_Age_25-39_UnAdj,Nucleocapsid (N-protein),50.05395068544007,-61.2544992449942," Newfoundland and Labrador,  Prince Edward Island",Abbott
+10,210112_Canada_CBS_BloodDonors_Age_25-39_UnAdj,Nucleocapsid (N-protein),51.42135977653754,-93.54182944200095," Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta, British Columbia",Abbott
+10,200819_Canada_CBS_BloodDonors_17-24,Nucleocapsid (N-protein),47.743264742525,-63.17733302131818," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick",Abbott
+10,200819_Canada_CBS_BloodDonors_17-24,Nucleocapsid (N-protein),53.32698840346,-105.72758428116914," Manitoba,  Saskatchewan,  Alberta,  British Columbia, Ontario",Abbott
+10,200715_GreaterVancouverArea_BC-Centre-For-Disease-Control_MarchSnapshot_OverallUnadj,Nucleocapsid (N-protein),54.726402559368964,-124.98785591540924,British Columbia, Ortho-Clinical Diagnostics
+10,200715_GreaterVancouverArea_BC-Centre-For-Disease-Control_MarchSnapshot_OverallUnadj,"Nucleocapsid (N-protein), Spike",55.65704556253808,-125.06922474721804,British Columbia,"Abbott,  Ortho-Clinical Diagnostics"
+10,210125_Canada_UniversityofToronto_Phase1_PopAdj_sn,Spike,45.7990935997,-63.1462704946171," Prince Edward Island,  Nova Scotia","Network Biology Collaborative
+Centre at Sinai Health"
+10,210125_Canada_UniversityofToronto_Phase1_PopAdj_sn,Spike,54.26111179062,-97.96218418315961," Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan,  Alberta,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+10,210112_Canada_CBS_BloodDonors_Age_17-24_UnAdj,Nucleocapsid (N-protein),50.3045982132875,-82.04055711814793," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick,  Ontario,  Manitoba,  Saskatchewan,  Alberta",Abbott
+10,210112_Canada_CBS_BloodDonors_Age_17-24_UnAdj,Nucleocapsid (N-protein),55.014284936945145,-125.17483476165448,British Columbia,Abbott
+10,210125_Canada_UniversityofToronto_Phase1_Males_sn,Spike,46.4006884874,-63.2495533992396, Prince Edward Island,"Network Biology Collaborative
+Centre at Sinai Health"
+10,210125_Canada_UniversityofToronto_Phase1_Males_sn,Spike,53.43714696529091,-94.78771176559914," Nova Scotia,  Newfoundland and Labrador,  New Brunswick,  Northwest Territories,  Manitoba,  Saskatchewan,  Alberta,  Quebec,  Yukon,  British Columbia, Ontario","Network Biology Collaborative
+Centre at Sinai Health"
+10,200819_Canada_CBS_BloodDonors_25-39_Adjusted,Nucleocapsid (N-protein),47.266939585417376,-63.18822100873961," Newfoundland and Labrador,  Prince Edward Island,  Nova Scotia,  New Brunswick",Abbott
+10,200819_Canada_CBS_BloodDonors_25-39_Adjusted,Nucleocapsid (N-protein),53.077793044108724,-105.69205080027176," Manitoba,  Saskatchewan,  Alberta,  British Columbia, Ontario",Abbott
+10,200819_Canada_CBS_BloodDonors_Overall_Adjusted,Nucleocapsid (N-protein),53.22164236672749,-60.24555840999568, Newfoundland and Labrador,Abbott
+10,200819_Canada_CBS_BloodDonors_Overall_Adjusted,Nucleocapsid (N-protein),50.607768475437496,-90.16348255945016," Prince Edward Island,  Nova Scotia,  New Brunswick,  Manitoba,  Saskatchewan,  Alberta,  British Columbia, Ontario",Abbott
