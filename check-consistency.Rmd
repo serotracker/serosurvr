@@ -26,10 +26,11 @@ all_tbls <- vector("list", n)
 
 for (i in 1:n) {
   ca_req <- datareq_params(
-  reqname = "CA_est",
-  research_fields = TRUE,
-  prioritize_estimates = FALSE,
-  filters = list(country = list("Canada")))
+    reqname = "CA_est",
+    research_fields = TRUE,
+    prioritize_estimates = FALSE,
+    filters = list(country = list("Canada"))
+  )
 
   ca_tbl_raw <- ca_req %>%
     get_data(import_new_data = T, path_to_cache_folder = '.cache')
@@ -128,7 +129,7 @@ list_to_text <- function(column, sep = ", ") {
 
 examine_listcols %>%
   mutate_if(is.list, list_to_text) %>%
-  readr:: write_csv('listcol_example_issues.csv')
+  readr:: write_csv('check-consistency-listcol_example_issues.csv')
 
 ```
 
