@@ -87,3 +87,21 @@ fs_males_tbl_cleaned <-
 
 fs_males_tbl_cleaned
 ```
+
+
+```{r cleandata}
+# enforce_st_dtypes enforces correct dtypes on all columns
+ab_on_tbl_cleaned <-
+  serosurvr::datareq_params(reqname = "ab_on_studies",
+                            research_fields = TRUE,
+                            prioritize_estimates = TRUE,
+                            prioritize_estimates_mode = "dashboard",
+                            filters = list(country = list('Canada'),
+                                           state = list('Alberta', 'Ontario'))) %>%
+  serosurvr::get_data(import_new_data = import_new_data,
+                      path_to_cache_folder = path_to_cache_folder,
+                      server = 'dev') %>%
+  serosurvr::enforce_st_dtypes()
+
+ab_on_tbl_cleaned
+```
