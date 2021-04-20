@@ -85,7 +85,7 @@ retrieve_data <- function(endpoint,
     records_envvar <- 'RECORDS_DEV_URL'
     filter_envvar <- 'FILTER_OPTIONS_DEV_URL'
   } else {
-    stop(printf('server must be either prod or dev'))
+    stop(sprintf('server must be either prod or dev'))
   }
 
   dotenv::load_dot_env(file = ".env")
@@ -190,6 +190,7 @@ get_data <- function(params,
 #'
 #' Retrieve filter options from the data_provider/filter_options endpoint
 #' @keywords import
+#' @param server whether to use the production server ('prod') or a local dev server ('dev')
 #' @seealso Calls [serosurvr::retrieve_data]
 #' @export
 #' @examples

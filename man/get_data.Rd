@@ -4,7 +4,7 @@
 \alias{get_data}
 \title{Get Data}
 \usage{
-get_data(params, import_new_data, path_to_cache_folder)
+get_data(params, import_new_data, path_to_cache_folder, server = "prod")
 }
 \arguments{
 \item{params}{\link{datareq_params} object itemizing request parameters}
@@ -15,6 +15,8 @@ even if a cache is present, and that cache will be overwritten
 import_new_data must be set to FALSE to use cached data}
 
 \item{path_to_cache_folder}{path to cache new data to, or read cache from}
+
+\item{server}{whether to use the production server ('prod') or a local dev server ('dev')}
 }
 \description{
 Gets serosurvey data from a cache or the SeroTracker servers.

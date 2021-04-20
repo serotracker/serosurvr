@@ -91,3 +91,18 @@ fs_males_tbl_cleaned
 ```{r uniquevals}
 unique(fs_males_tbl$population_group)
 ```
+
+
+```{r dev}
+fs_males_tbl_cleaned <-
+  fs_males_req %>%
+  serosurvr::get_data(import_new_data = import_new_data,
+                      path_to_cache_folder = path_to_cache_folder,
+                      server = 'dev') %>%
+  serosurvr::enforce_st_dtypes()
+
+fs_males_tbl_cleaned
+```
+
+```{r dev filteropts}
+serosurvr::filter_options(server = 'dev')

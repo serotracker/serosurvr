@@ -4,12 +4,14 @@
 \alias{retrieve_data}
 \title{Retrieve Data}
 \usage{
-retrieve_data(endpoint, params = NA)
+retrieve_data(endpoint, params = NA, server = "prod")
 }
 \arguments{
 \item{endpoint}{endpoint to be requested; "records" or "filter_options"}
 
 \item{params}{\link{datareq_params} object itemizing request parameters}
+
+\item{server}{whether to use the production server ('prod') or a local dev server ('dev')}
 }
 \description{
 Request SeroTracker data from a data_provider endpoint

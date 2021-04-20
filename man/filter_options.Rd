@@ -4,7 +4,10 @@
 \alias{filter_options}
 \title{Filter Options}
 \usage{
-filter_options()
+filter_options(server = "prod")
+}
+\arguments{
+\item{server}{whether to use the production server ('prod') or a local dev server ('dev')}
 }
 \description{
 Retrieve filter options from the data_provider/filter_options endpoint
