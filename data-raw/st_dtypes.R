@@ -9,7 +9,8 @@ st_dtypes <- list(
       "pop_adj",
       "superceded",
       "test_adj",
-      "geo_exact_match"),
+      "geo_exact_match",
+      "include_in_srma"),
   double =
     c("case_count_0",
       "case_count_neg14",
