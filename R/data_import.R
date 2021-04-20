@@ -71,23 +71,36 @@ datareq_params <- function(reqname = character(),
 #' Request SeroTracker data from a data_provider endpoint
 #' @param endpoint endpoint to be requested; "records" or "filter_options"
 #' @param params [serosurvr::datareq_params] object itemizing request parameters
+#' @param server whether to use the production server ('prod') or a local dev server ('dev')
 #' @seealso [serosurvr::get_data] and [serosurvr::filter_options] call this
 #' @keywords import
-retrieve_data <- function(endpoint, params = NA) {
+retrieve_data <- function(endpoint,
+                          params = NA,
+                          server = 'prod') {
+
+  if (server == 'prod') {
+    records_envvar <- 'RECORDS_URL'
+    filter_envvar <- 'FILTER_OPTIONS_URL'
+  } else if (server == 'dev') {
+    records_envvar <- 'RECORDS_DEV_URL'
+    filter_envvar <- 'FILTER_OPTIONS_DEV_URL'
+  } else {
+    stop(printf('server must be either prod or dev'))
+  }
 
   dotenv::load_dot_env(file = ".env")
 
   if (endpoint == "records") {
 
     stopifnot(inherits(params, "datareq_params"))
-    url <- Sys.getenv("RECORDS_URL")
+    url <- Sys.getenv(records_envvar)
     response <- httr::POST(url = url,
                            body = params,
                            encode = "json")
 
   } else if (endpoint == "filter_options") {
 
-    url <- Sys.getenv("FILTER_OPTIONS_URL")
+    url <- Sys.getenv(filter_envvar)
     response <- httr::GET(url = url)
 
   } else {
@@ -129,6 +142,7 @@ retrieve_data <- function(endpoint, params = NA) {
 #' even if a cache is present, and that cache will be overwritten
 #' import_new_data must be set to FALSE to use cached data
 #' @param path_to_cache_folder path to cache new data to, or read cache from
+#' @param server whether to use the production server ('prod') or a local dev server ('dev')
 #' @seealso calls [serosurvr::retrieve_data]
 #' @keywords import
 #' @export
@@ -140,10 +154,12 @@ retrieve_data <- function(endpoint, params = NA) {
 #' }
 get_data <- function(params,
                      import_new_data,
-                     path_to_cache_folder) {
+                     path_to_cache_folder,
+                     server = 'prod') {
   stopifnot(inherits(params, "datareq_params") &
             is.logical(import_new_data) &
-            is.character(path_to_cache_folder))
+            is.character(path_to_cache_folder) &
+            ((server == 'prod') | (server == 'dev')))
 
   reqname <- attr(params, "reqname")
   path_to_cache_file = fs::path(path_to_cache_folder,
@@ -154,7 +170,7 @@ get_data <- function(params,
     fs::dir_create(path_to_cache_folder)
 
     tbl <-
-      retrieve_data("records", params) %>%
+      retrieve_data("records", params, server) %>%
       tibble::as_tibble() %>%
       readr::write_rds(path_to_cache_file,
                        compress = "gz")
@@ -180,6 +196,7 @@ get_data <- function(params,
 #' \dontrun{
 #' filter_options()
 #' }
-filter_options <- function() {
-  retrieve_data("filter_options")
+filter_options <- function(server = 'prod') {
+  stopifnot((server == 'prod') | (server == 'dev'))
+  retrieve_data("filter_options", server)
 }
