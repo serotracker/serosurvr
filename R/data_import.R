@@ -13,6 +13,8 @@
 #' @param include_in_srma Whether to filter results by a custom variable in AirTable;
 #' not recommended to use this unless you have confirmed that the AirTable flag you are using
 #' is properly configured to work with this variable
+#' @param include_records_without_latlngs Whether to include records without latitude and longitude coordinates. Defaults to TRUE
+#' @param include_disputed_regions Whether to include disputed regions. Defaults to TRUE
 #' @param filters Named list, with filter names and a list of allowed options for that filter
 #' @seealso [serosurvr::get_data] which takes these params as input
 #' @keywords import
@@ -33,6 +35,8 @@ datareq_params <- function(reqname = character(),
                            publication_start_date = NULL,
                            publication_end_date = NULL,
                            include_in_srma = NULL,
+                           include_records_without_latlngs = TRUE,
+                           include_disputed_regions = TRUE,
                            filters = list()) {
   stopifnot(is.character(reqname) &
             is.logical(research_fields) &
@@ -44,6 +48,8 @@ datareq_params <- function(reqname = character(),
             (is.character(publication_start_date) | is.null(publication_start_date)) &
             (is.character(publication_end_date) | is.null(publication_end_date)) &
             (is.logical(include_in_srma) | is.null(include_in_srma)) &
+            is.logical(include_records_without_latlngs) &
+            is.logical(include_disputed_regions) &
             is.list(filters))
 
   params <- list(research_fields = research_fields,
@@ -55,6 +61,8 @@ datareq_params <- function(reqname = character(),
                  publication_start_date = publication_start_date,
                  publication_end_date = publication_end_date,
                  include_in_srma = include_in_srma,
+                 include_records_without_latlngs = include_records_without_latlngs,
+                 include_disputed_regions = include_disputed_regions,
                  filters = filters)
 
   params <- params[!sapply(params, is.null)]
