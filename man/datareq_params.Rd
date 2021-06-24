@@ -15,6 +15,8 @@ datareq_params(
   publication_start_date = NULL,
   publication_end_date = NULL,
   include_in_srma = NULL,
+  include_records_without_latlngs = TRUE,
+  include_disputed_regions = TRUE,
   filters = list()
 )
 }
@@ -40,6 +42,10 @@ datareq_params(
 \item{include_in_srma}{Whether to filter results by a custom variable in AirTable;
 not recommended to use this unless you have confirmed that the AirTable flag you are using
 is properly configured to work with this variable}
+
+\item{include_records_without_latlngs}{Whether to include records without latitude and longitude coordinates. Defaults to TRUE}
+
+\item{include_disputed_regions}{Whether to include disputed regions. Defaults to TRUE}
 
 \item{filters}{Named list, with filter names and a list of allowed options for that filter}
 }
