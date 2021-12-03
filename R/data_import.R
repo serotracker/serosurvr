@@ -3,7 +3,7 @@
 #' Creates an object specifying parameters for a request for SeroTracker data.
 #' @param reqname Request name. Used as an identifier and for caching.
 #' @param research_fields Should research fields be pulled? Defaults to TRUE
-#' @param prioritize_estimates Should one priority estimate per study be returned (TRUE), or all estimates (FALSE)? Defaults to FALSE.
+#' @param estimates_subgroup Should one primary estimate per study be returned ('primary_estimates'), one priority estimate per study ('estimate_prioritization'), or all estimates ('all')? Defaults to 'all'.
 #' @param prioritize_estimates_mode What mode should be used to prioritize estimates? Defaults to 'analysis_dynamic'; other options are 'analysis_static' and 'dashboard'
 #' @param columns List or empty; if not empty, returns only the specified columns
 #' @param sampling_start_date Filter results by sampling_start_date; format: YYYY-MM-DD
@@ -22,12 +22,12 @@
 #' @examples
 #' fs_males_params <- datareq_params(reqname = "france_spain_males",
 #'                                   research_fields = TRUE,
-#'                                   prioritize_estimates = TRUE,
+#'                                   estimates_subgroup = 'estimate_prioritization',
 #'                                   filters = list(country = list("France", "Spain"),
 #'                                                  sex = list("Male")))
 datareq_params <- function(reqname = character(),
                            research_fields = TRUE,
-                           prioritize_estimates = FALSE,
+                           estimates_subgroup = 'all',
                            prioritize_estimates_mode = 'analysis_dynamic',
                            columns = NULL,
                            sampling_start_date = NULL,
@@ -40,7 +40,7 @@ datareq_params <- function(reqname = character(),
                            filters = list()) {
   stopifnot(is.character(reqname) &
             is.logical(research_fields) &
-            is.logical(prioritize_estimates) &
+            is.character(estimates_subgroup) &
             is.character(prioritize_estimates_mode) &
             (is.list(columns) | is.null(columns)) &
             (is.character(sampling_start_date) | is.null(sampling_start_date)) &
@@ -53,7 +53,7 @@ datareq_params <- function(reqname = character(),
             is.list(filters))
 
   params <- list(research_fields = research_fields,
-                 prioritize_estimates = prioritize_estimates,
+                 estimates_subgroup = estimates_subgroup,
                  prioritize_estimates_mode = prioritize_estimates_mode,
                  columns = columns,
                  sampling_start_date = sampling_start_date,
