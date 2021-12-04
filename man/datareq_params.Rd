@@ -7,6 +7,7 @@
 datareq_params(
   reqname = character(),
   research_fields = TRUE,
+  prioritize_estimates = FALSE,
   estimates_subgroup = "all_estimates",
   prioritize_estimates_mode = "analysis_dynamic",
   columns = NULL,
@@ -24,6 +25,8 @@ datareq_params(
 \item{reqname}{Request name. Used as an identifier and for caching.}
 
 \item{research_fields}{Should research fields be pulled? Defaults to TRUE}
+
+\item{prioritize_estimates}{If TRUE and estimates_subgroup not specified, will set estimates_subgroup to 'prioritize_estimates'. Defaults to FALSE.}
 
 \item{estimates_subgroup}{Should one primary estimate per study be returned ('primary_estimates'), one priority estimate per study ('prioritize_estimates'), or all estimates ('all_estimates')? Defaults to 'all_estimates'.}
 

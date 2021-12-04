@@ -3,6 +3,7 @@
 #' Creates an object specifying parameters for a request for SeroTracker data.
 #' @param reqname Request name. Used as an identifier and for caching.
 #' @param research_fields Should research fields be pulled? Defaults to TRUE
+#' @param prioritize_estimates If TRUE and estimates_subgroup not specified, will set estimates_subgroup to 'prioritize_estimates'. Defaults to FALSE.
 #' @param estimates_subgroup Should one primary estimate per study be returned ('primary_estimates'), one priority estimate per study ('prioritize_estimates'), or all estimates ('all_estimates')? Defaults to 'all_estimates'.
 #' @param prioritize_estimates_mode What mode should be used to prioritize estimates? Defaults to 'analysis_dynamic'; other options are 'analysis_static' and 'dashboard'
 #' @param columns List or empty; if not empty, returns only the specified columns
@@ -27,6 +28,7 @@
 #'                                                  sex = list("Male")))
 datareq_params <- function(reqname = character(),
                            research_fields = TRUE,
+                           prioritize_estimates = FALSE,
                            estimates_subgroup = 'all_estimates',
                            prioritize_estimates_mode = 'analysis_dynamic',
                            columns = NULL,
@@ -38,8 +40,14 @@ datareq_params <- function(reqname = character(),
                            include_records_without_latlngs = TRUE,
                            include_disputed_regions = TRUE,
                            filters = list()) {
+
+  if (prioritize_estimates == TRUE & estimates_subgroup == 'all_estimates') {
+    estimates_subgroup = 'prioritize_estimates'
+  }
+
   stopifnot(is.character(reqname) &
             is.logical(research_fields) &
+            is.logical(prioritize_estimates) &
             is.character(estimates_subgroup) &
             is.character(prioritize_estimates_mode) &
             (is.list(columns) | is.null(columns)) &
