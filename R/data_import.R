@@ -3,7 +3,7 @@
 #' Creates an object specifying parameters for a request for SeroTracker data.
 #' @param reqname Request name. Used as an identifier and for caching.
 #' @param research_fields Should research fields be pulled? Defaults to TRUE
-#' @param estimates_subgroup Should one primary estimate per study be returned ('primary_estimates'), one priority estimate per study ('estimate_prioritization'), or all estimates ('all')? Defaults to 'all'.
+#' @param estimates_subgroup Should one primary estimate per study be returned ('primary_estimates'), one priority estimate per study ('prioritize_estimates'), or all estimates ('all_estimates')? Defaults to 'all_estimates'.
 #' @param prioritize_estimates_mode What mode should be used to prioritize estimates? Defaults to 'analysis_dynamic'; other options are 'analysis_static' and 'dashboard'
 #' @param columns List or empty; if not empty, returns only the specified columns
 #' @param sampling_start_date Filter results by sampling_start_date; format: YYYY-MM-DD
@@ -22,12 +22,12 @@
 #' @examples
 #' fs_males_params <- datareq_params(reqname = "france_spain_males",
 #'                                   research_fields = TRUE,
-#'                                   estimates_subgroup = 'estimate_prioritization',
+#'                                   estimates_subgroup = 'prioritize_estimates',
 #'                                   filters = list(country = list("France", "Spain"),
 #'                                                  sex = list("Male")))
 datareq_params <- function(reqname = character(),
                            research_fields = TRUE,
-                           estimates_subgroup = 'all',
+                           estimates_subgroup = 'all_estimates',
                            prioritize_estimates_mode = 'analysis_dynamic',
                            columns = NULL,
                            sampling_start_date = NULL,

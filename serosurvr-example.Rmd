@@ -50,7 +50,7 @@ Sample functions that demonstrate how to get data.
 #create a data request
 fs_males_req <- serosurvr::datareq_params(reqname = "france_spain_males",
                                           research_fields = TRUE,
-                                          estimates_subgroup = 'estimate_prioritization',
+                                          estimates_subgroup = 'prioritize_estimates',
                                           prioritize_estimates_mode = "analysis_dynamic",
                                           publication_end_date = "2020-12-31",
                                           filters = list())
@@ -94,7 +94,7 @@ fs_males_tbl_cleaned
 ab_on_tbl_cleaned <-
   serosurvr::datareq_params(reqname = "ab_on_studies",
                             research_fields = TRUE,
-                            estimates_subgroup = 'estimate_prioritization',
+                            estimates_subgroup = 'prioritize_estimates',
                             prioritize_estimates_mode = "dashboard",
                             filters = list(country = list('Canada'),
                                            state = list('Alberta', 'Ontario'))) %>%
