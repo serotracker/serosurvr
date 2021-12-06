@@ -16,7 +16,6 @@
 #' is properly configured to work with this variable
 #' @param include_records_without_latlngs Whether to include records without latitude and longitude coordinates. Defaults to TRUE
 #' @param include_disputed_regions Whether to include disputed regions. Defaults to TRUE
-#' @param include_subgeography_estimates Whether to include subgeography estimates. Defaults to FALSE
 #' @param calculate_country_seroprev_summaries Defaults to FALSE to return only records
 #' @param filters Named list, with filter names and a list of allowed options for that filter
 #' @seealso [serosurvr::get_data] which takes these params as input
@@ -41,7 +40,6 @@ datareq_params <- function(reqname = character(),
                            include_in_srma = NULL,
                            include_records_without_latlngs = TRUE,
                            include_disputed_regions = TRUE,
-                           include_subgeography_estimates = FALSE,
                            calculate_country_seroprev_summaries = FALSE,
                            filters = list()) {
 
@@ -62,7 +60,6 @@ datareq_params <- function(reqname = character(),
             (is.logical(include_in_srma) | is.null(include_in_srma)) &
             is.logical(include_records_without_latlngs) &
             is.logical(include_disputed_regions) &
-            is.logical(include_subgeography_estimates) &
             is.logical(calculate_country_seroprev_summaries) &
             is.list(filters))
 
@@ -77,7 +74,6 @@ datareq_params <- function(reqname = character(),
                  include_in_srma = include_in_srma,
                  include_records_without_latlngs = include_records_without_latlngs,
                  include_disputed_regions = include_disputed_regions,
-                 include_subgeography_estimates = include_subgeography_estimates,
                  calculate_country_seroprev_summaries = calculate_country_seroprev_summaries,
                  filters = filters)
 
