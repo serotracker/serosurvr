@@ -18,6 +18,7 @@ datareq_params(
   include_in_srma = NULL,
   include_records_without_latlngs = TRUE,
   include_disputed_regions = TRUE,
+  include_subgeography_estimates = FALSE,
   calculate_country_seroprev_summaries = FALSE,
   filters = list()
 )
@@ -51,7 +52,9 @@ is properly configured to work with this variable}
 
 \item{include_disputed_regions}{Whether to include disputed regions. Defaults to TRUE}
 
-\item{calculate_country_seroprev_summaries}{Defaults to FALSE to avoid errors}
+\item{include_subgeography_estimates}{Whether to include subgeography estimates. Defaults to FALSE}
+
+\item{calculate_country_seroprev_summaries}{Defaults to FALSE to return only records}
 
 \item{filters}{Named list, with filter names and a list of allowed options for that filter}
 }
