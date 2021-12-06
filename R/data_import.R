@@ -3,7 +3,8 @@
 #' Creates an object specifying parameters for a request for SeroTracker data.
 #' @param reqname Request name. Used as an identifier and for caching.
 #' @param research_fields Should research fields be pulled? Defaults to TRUE
-#' @param prioritize_estimates Should one priority estimate per study be returned (TRUE), or all estimates (FALSE)? Defaults to FALSE.
+#' @param prioritize_estimates If TRUE and estimates_subgroup not specified, will set estimates_subgroup to 'prioritize_estimates'. Defaults to FALSE.
+#' @param estimates_subgroup Should one primary estimate per study be returned ('primary_estimates'), one priority estimate per study ('prioritize_estimates'), or all estimates ('all_estimates')? Defaults to 'all_estimates'.
 #' @param prioritize_estimates_mode What mode should be used to prioritize estimates? Defaults to 'analysis_dynamic'; other options are 'analysis_static' and 'dashboard'
 #' @param columns List or empty; if not empty, returns only the specified columns
 #' @param sampling_start_date Filter results by sampling_start_date; format: YYYY-MM-DD
@@ -15,6 +16,7 @@
 #' is properly configured to work with this variable
 #' @param include_records_without_latlngs Whether to include records without latitude and longitude coordinates. Defaults to TRUE
 #' @param include_disputed_regions Whether to include disputed regions. Defaults to TRUE
+#' @param calculate_country_seroprev_summaries Defaults to FALSE to return only records
 #' @param filters Named list, with filter names and a list of allowed options for that filter
 #' @seealso [serosurvr::get_data] which takes these params as input
 #' @keywords import
@@ -22,12 +24,13 @@
 #' @examples
 #' fs_males_params <- datareq_params(reqname = "france_spain_males",
 #'                                   research_fields = TRUE,
-#'                                   prioritize_estimates = TRUE,
+#'                                   estimates_subgroup = 'prioritize_estimates',
 #'                                   filters = list(country = list("France", "Spain"),
 #'                                                  sex = list("Male")))
 datareq_params <- function(reqname = character(),
                            research_fields = TRUE,
                            prioritize_estimates = FALSE,
+                           estimates_subgroup = 'all_estimates',
                            prioritize_estimates_mode = 'analysis_dynamic',
                            columns = NULL,
                            sampling_start_date = NULL,
@@ -37,10 +40,17 @@ datareq_params <- function(reqname = character(),
                            include_in_srma = NULL,
                            include_records_without_latlngs = TRUE,
                            include_disputed_regions = TRUE,
+                           calculate_country_seroprev_summaries = FALSE,
                            filters = list()) {
+
+  if (prioritize_estimates == TRUE & estimates_subgroup == 'all_estimates') {
+    estimates_subgroup = 'prioritize_estimates'
+  }
+
   stopifnot(is.character(reqname) &
             is.logical(research_fields) &
             is.logical(prioritize_estimates) &
+            is.character(estimates_subgroup) &
             is.character(prioritize_estimates_mode) &
             (is.list(columns) | is.null(columns)) &
             (is.character(sampling_start_date) | is.null(sampling_start_date)) &
@@ -50,10 +60,11 @@ datareq_params <- function(reqname = character(),
             (is.logical(include_in_srma) | is.null(include_in_srma)) &
             is.logical(include_records_without_latlngs) &
             is.logical(include_disputed_regions) &
+            is.logical(calculate_country_seroprev_summaries) &
             is.list(filters))
 
   params <- list(research_fields = research_fields,
-                 prioritize_estimates = prioritize_estimates,
+                 estimates_subgroup = estimates_subgroup,
                  prioritize_estimates_mode = prioritize_estimates_mode,
                  columns = columns,
                  sampling_start_date = sampling_start_date,
@@ -63,6 +74,7 @@ datareq_params <- function(reqname = character(),
                  include_in_srma = include_in_srma,
                  include_records_without_latlngs = include_records_without_latlngs,
                  include_disputed_regions = include_disputed_regions,
+                 calculate_country_seroprev_summaries = calculate_country_seroprev_summaries,
                  filters = filters)
 
   params <- params[!sapply(params, is.null)]
@@ -178,7 +190,7 @@ get_data <- function(params,
     fs::dir_create(path_to_cache_folder)
 
     tbl <-
-      retrieve_data("records", params, server) %>%
+      retrieve_data("records", params, server)$records %>%
       tibble::as_tibble() %>%
       readr::write_rds(path_to_cache_file,
                        compress = "gz")

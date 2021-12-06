@@ -8,6 +8,7 @@ datareq_params(
   reqname = character(),
   research_fields = TRUE,
   prioritize_estimates = FALSE,
+  estimates_subgroup = "all_estimates",
   prioritize_estimates_mode = "analysis_dynamic",
   columns = NULL,
   sampling_start_date = NULL,
@@ -17,6 +18,7 @@ datareq_params(
   include_in_srma = NULL,
   include_records_without_latlngs = TRUE,
   include_disputed_regions = TRUE,
+  calculate_country_seroprev_summaries = FALSE,
   filters = list()
 )
 }
@@ -25,7 +27,9 @@ datareq_params(
 
 \item{research_fields}{Should research fields be pulled? Defaults to TRUE}
 
-\item{prioritize_estimates}{Should one priority estimate per study be returned (TRUE), or all estimates (FALSE)? Defaults to FALSE.}
+\item{prioritize_estimates}{If TRUE and estimates_subgroup not specified, will set estimates_subgroup to 'prioritize_estimates'. Defaults to FALSE.}
+
+\item{estimates_subgroup}{Should one primary estimate per study be returned ('primary_estimates'), one priority estimate per study ('prioritize_estimates'), or all estimates ('all_estimates')? Defaults to 'all_estimates'.}
 
 \item{prioritize_estimates_mode}{What mode should be used to prioritize estimates? Defaults to 'analysis_dynamic'; other options are 'analysis_static' and 'dashboard'}
 
@@ -47,6 +51,8 @@ is properly configured to work with this variable}
 
 \item{include_disputed_regions}{Whether to include disputed regions. Defaults to TRUE}
 
+\item{calculate_country_seroprev_summaries}{Defaults to FALSE to return only records}
+
 \item{filters}{Named list, with filter names and a list of allowed options for that filter}
 }
 \description{
@@ -55,7 +61,7 @@ Creates an object specifying parameters for a request for SeroTracker data.
 \examples{
 fs_males_params <- datareq_params(reqname = "france_spain_males",
                                   research_fields = TRUE,
-                                  prioritize_estimates = TRUE,
+                                  estimates_subgroup = 'prioritize_estimates',
                                   filters = list(country = list("France", "Spain"),
                                                  sex = list("Male")))
 }
