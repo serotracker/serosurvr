@@ -146,8 +146,12 @@ retrieve_data <- function(endpoint,
     )
   }
 
-  result <- jsonlite::fromJSON(result, simplifyDataFrame = TRUE)
-
+  result <- RJSONIO::fromJSON(result)
+  result <- lapply(result, function(x) {
+    x[sapply(x, is.null)] <- NA
+    unlist(x)
+  })
+  result <- data.frame(do.call("rbind", result))
   result
 }
 
@@ -190,7 +194,7 @@ get_data <- function(params,
     fs::dir_create(path_to_cache_folder)
 
     tbl <-
-      retrieve_data("records", params, server)$records %>%
+      retrieve_data("records", params, server) %>%
       tibble::as_tibble() %>%
       readr::write_rds(path_to_cache_file,
                        compress = "gz")
