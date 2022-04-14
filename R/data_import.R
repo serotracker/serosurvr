@@ -128,16 +128,16 @@ retrieve_data <- function(endpoint,
   }
 
   if (httr::http_type(response) != "application/json") {
+
     sprintf("Endpoint did not return JSON, trying again")
     Sys.sleep(15)
-    stopifnot(inherits(params, "datareq_params"))
-    url <- Sys.getenv(records_envvar)
     response <- httr::POST(url = url,
                            body = params,
                            encode = "json")
     if (httr::http_type(response) != "application/json") {
       stop("Endpoint did not return JSON", call. = FALSE)
     }
+
   }
 
   result <- httr::content(response,
