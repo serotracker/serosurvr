@@ -48,20 +48,20 @@ datareq_params <- function(reqname = character(),
   }
 
   stopifnot(is.character(reqname) &
-            is.logical(research_fields) &
-            is.logical(prioritize_estimates) &
-            is.character(estimates_subgroup) &
-            is.character(prioritize_estimates_mode) &
-            (is.list(columns) | is.null(columns)) &
-            (is.character(sampling_start_date) | is.null(sampling_start_date)) &
-            (is.character(sampling_end_date) | is.null(sampling_end_date)) &
-            (is.character(publication_start_date) | is.null(publication_start_date)) &
-            (is.character(publication_end_date) | is.null(publication_end_date)) &
-            (is.logical(include_in_srma) | is.null(include_in_srma)) &
-            is.logical(include_records_without_latlngs) &
-            is.logical(include_disputed_regions) &
-            is.logical(calculate_country_seroprev_summaries) &
-            is.list(filters))
+              is.logical(research_fields) &
+              is.logical(prioritize_estimates) &
+              is.character(estimates_subgroup) &
+              is.character(prioritize_estimates_mode) &
+              (is.list(columns) | is.null(columns)) &
+              (is.character(sampling_start_date) | is.null(sampling_start_date)) &
+              (is.character(sampling_end_date) | is.null(sampling_end_date)) &
+              (is.character(publication_start_date) | is.null(publication_start_date)) &
+              (is.character(publication_end_date) | is.null(publication_end_date)) &
+              (is.logical(include_in_srma) | is.null(include_in_srma)) &
+              is.logical(include_records_without_latlngs) &
+              is.logical(include_disputed_regions) &
+              is.logical(calculate_country_seroprev_summaries) &
+              is.list(filters))
 
   params <- list(research_fields = research_fields,
                  estimates_subgroup = estimates_subgroup,
@@ -128,7 +128,16 @@ retrieve_data <- function(endpoint,
   }
 
   if (httr::http_type(response) != "application/json") {
-    stop("Endpoint did not return JSON", call. = FALSE)
+    sprintf("Endpoint did not return JSON, trying again")
+    Sys.sleep(15)
+    stopifnot(inherits(params, "datareq_params"))
+    url <- Sys.getenv(records_envvar)
+    response <- httr::POST(url = url,
+                           body = params,
+                           encode = "json")
+    if (httr::http_type(response) != "application/json") {
+      stop("Endpoint did not return JSON", call. = FALSE)
+    }
   }
 
   result <- httr::content(response,
@@ -177,9 +186,9 @@ get_data <- function(params,
                      path_to_cache_folder,
                      server = 'prod') {
   stopifnot(inherits(params, "datareq_params") &
-            is.logical(import_new_data) &
-            is.character(path_to_cache_folder) &
-            ((server == 'prod') | (server == 'dev')))
+              is.logical(import_new_data) &
+              is.character(path_to_cache_folder) &
+              ((server == 'prod') | (server == 'dev')))
 
   reqname <- attr(params, "reqname")
   path_to_cache_file = fs::path(path_to_cache_folder,
