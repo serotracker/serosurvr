@@ -117,26 +117,32 @@ retrieve_data <- function(endpoint,
     response <- httr::POST(url = url,
                            body = params,
                            encode = "json")
+    
+    if (httr::http_type(response) != "application/json") {
+
+      Sys.sleep(15)
+      
+      response <- httr::POST(url = url,
+                             body = params,
+                             encode = "json")
+      
+      if (httr::http_type(response) != "application/json") {
+        stop("Endpoint did not return JSON", call. = FALSE)
+      }
+
+    }
 
   } else if (endpoint == "filter_options") {
 
     url <- Sys.getenv(filter_envvar)
     response <- httr::GET(url = url)
-
-  } else {
-    stop(sprintf("endpoint %s is an invalid endpoint option", endpoint))
-  }
-
-  if (httr::http_type(response) != "application/json") {
-
-    Sys.sleep(15)
-    response <- httr::POST(url = url,
-                           body = params,
-                           encode = "json")
+    
     if (httr::http_type(response) != "application/json") {
       stop("Endpoint did not return JSON", call. = FALSE)
     }
 
+  } else {
+    stop(sprintf("endpoint %s is an invalid endpoint option", endpoint))
   }
 
   result <- httr::content(response,
