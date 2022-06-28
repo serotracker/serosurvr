@@ -18,8 +18,48 @@ RECORDS_URL=
 FILTER_OPTIONS_URL=
 ```
 
-Check the pinned message in the #data-modelling Slack channel or ask Rahul for the environment variables that you will need.
+Check the pinned message in the #data-modelling Slack channel or ask Harriet for the environment variables that you will need.
 
+### Setting file options
+
+Set `import_new_data = TRUE` to import new data or `import_new_data = FALSE` to use cached data.
+
+Set the path to cache folder to read from and write to for this project, e.g.
+`path_to_cache_folder = ".cache/example_analysis"`
+
+### Creating a data request
+
+A basic data request has parameters `reqname` and `estimates_subgroup`. The `estimates_subgroup` parameter takes 3 values:
+- `all_estimates`: return all estimates [DEFAULT]
+- `primary_estimates`: return only primary estimates (one summary estimate per study identified by SeroTracker)
+- `prioritize_estimates`: return only prioritized estimates according to `prioritize_estimates_mode`
+
+If using `prioritize_estimates`, there are 3 options for `prioritize_estimates_mode` related to test adjustment:
+- `dashboard`: Prioritizes study author's test adjusted ("dashboard primary") estimate.
+- `analysis_static`: Prioritizes study author's test unadjusted ("academic primary") estimate.
+- `analysis_dynamic`: Prioritizes SeroTracker's own test adjusted estimate. If we were unable to successfully adjust the seroprevalence estimate ourselves, returns the study author's test adjusted estimate. [DEFAULT]
+
+The full prioritization algorithm is stored here: https://github.com/serotracker/iit-backend/blob/b5dfe5c8af42f652fded59303ab97d04847be16c/app/utils/estimate_prioritization/estimate_prioritization.py
+
+Example:
+```
+fs_males_req <- serosurvr::datareq_params(reqname = "data_req",
+                                          estimates_subgroup = 'prioritize_estimates',
+                                          prioritize_estimates_mode = "dashboard")
+```
+
+### Requesting data
+
+To request data, pipe the data request to the `get_data` function.
+
+Example:
+```
+tbl <-
+  data_req %>%
+  serosurvr::get_data(import_new_data = import_new_data,
+                      path_to_cache_folder = path_to_cache_folder)
+```
+                                          
 ## Improving serosurvr
 
 ### Pushing new versions of serosurvr
