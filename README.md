@@ -39,7 +39,7 @@ If using `prioritize_estimates`, `prioritize_estimates_mode` takes 3 values rela
 - `analysis_static`: Prioritizes study author's test unadjusted ("academic primary") estimate.
 - `analysis_dynamic`: Prioritizes SeroTracker's own test adjusted estimate. If we were unable to successfully adjust the seroprevalence estimate ourselves, returns the study author's test adjusted estimate. [DEFAULT]
 
-The full prioritization algorithm is stored here: https://github.com/serotracker/iit-backend/blob/b5dfe5c8af42f652fded59303ab97d04847be16c/app/utils/estimate_prioritization/estimate_prioritization.py
+The full estimate prioritization code is stored here: https://github.com/serotracker/iit-backend/blob/b5dfe5c8af42f652fded59303ab97d04847be16c/app/utils/estimate_prioritization/estimate_prioritization.py
 
 Example:
 ```
