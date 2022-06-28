@@ -34,7 +34,7 @@ A basic data request has parameters `reqname` and `estimates_subgroup`. The `est
 - `primary_estimates`: return only primary estimates (one summary estimate per study identified by SeroTracker)
 - `prioritize_estimates`: return only prioritized estimates according to `prioritize_estimates_mode`
 
-If using `prioritize_estimates`, there are 3 options for `prioritize_estimates_mode` related to test adjustment:
+If using `prioritize_estimates`, `prioritize_estimates_mode` takes 3 values related to test adjustment:
 - `dashboard`: Prioritizes study author's test adjusted ("dashboard primary") estimate.
 - `analysis_static`: Prioritizes study author's test unadjusted ("academic primary") estimate.
 - `analysis_dynamic`: Prioritizes SeroTracker's own test adjusted estimate. If we were unable to successfully adjust the seroprevalence estimate ourselves, returns the study author's test adjusted estimate. [DEFAULT]
